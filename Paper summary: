@@ -1,0 +1,12 @@
+Paper summary:
+
+This paper answers an important question: how does adversarial robustness transfer of a pretrained model to the downstream task? The author look into the robustness of the representation layers and further bound the robustenss of the predictor on the downstream tasks with it. The author further proves that if the representations of a model is intentionally robustified, the degradation in robustness brought by the normally trained predictor will not be mitigated.
+
+Strengths:
+1. How to transfer with robustness is indeed a critical question to the trustworthy machine learning community. Although this work is short, the conclusion and the discovery is inspiring.
+2. The theoretical proof on the robust bound by the representations are novel and meaningful. 
+
+
+Weakness:
+1. The writing of the paper can be improved if the authors make the main conclusion more conspicuous. This will help the readers grasp the main idea of this paper better and faster.
+2. As the paper admits, the lack of empirical experiments make the conclusions in this paper less convincing. This paper will be more impactful if empirical experiments are added.
