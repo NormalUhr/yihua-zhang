@@ -1,0 +1,77 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Yihua Zhang
+    - name: Date of Birth
+      value: 9th July 1997
+    - name: Languages
+      value: Chinese, English, German
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Ph.D. Student in Computer Science
+      institution: Michigan State University, USA
+      year: 2022 - now
+      description:
+        - title: Trustworthy Machine Learning
+          contents:
+              - Robustness
+              - Fairness
+              - Explanability
+        - title: Scalable Machine Learning
+          contents:
+            - Efficient Algorithm
+            - Efficient Model
+            - Efficient Data
+    
+    - title: Master in Automation
+      institution: RWTH Aachen University, Germany
+      year: 2021
+
+    - title: B.E. in Automation
+      institution: Huazhong University of Science and Technology, China
+      year: 2019
+
+- title: Internship Experience
+  type: time_table
+  contents:
+    - title: Research Internship
+      institution: JD AI Research
+      year: 2021
+
+- title: Open Source Projects
+  type: time_table
+  contents:
+    - title: <a href="https://github.com/NormalUhr/Fast_BAT">Fast-BAT</a>
+      year: 2015-now
+      description: A fast bi-level optimization-based adversarial training framework.
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2022
+      items: 
+        - Best Paper Runner-up Awards, UAI 2022
+    - year: 2017
+      items: 
+        - National Scholarship
+    - year: 2016
+      items: 
+        - National Scholarship
+      
+- title: Professional Services
+  type: list
+  contents:
+    - <u>Conference Reviewer:</u> CVPR'22, ICLR'22, ICML'22, NeurIPS'22
+    - <u>Journal Reviewer:</u> TMLR
+    - Chair of ICML’22 Workshop AdvML (<a href="https://advml-frontier.github.io/">New Frontiers in Adversarial Machine Learning</a>).
+    - TPC of <a href="https://www.yihua-zhang.com/">KDD’22 Workshop 4th Workshop on Adversarial Learning Methods for Machine Learning and Data Mining</a>.
+    - TPC of <a href="https://neurips2021workshopfl.github.io/NFFL-2021/committee.html">NeurIPS'21 Workshop NFFL New Frontiers in Federated Learning Privacy, Fairness, Robustness, Personalization and Data Ownership</a>.
+
+- title: Talk
+  type: list
+  contents:
+    - Advancing Algorithmic Foundation of Robust Deep Learning through the Lens of Bi-level Optimization at INFORMS Annual Meeting 2022
+
