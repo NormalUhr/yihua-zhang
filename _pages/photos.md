@@ -10,8 +10,12 @@ nav_order: 7
 <div class="projects">
   <h2 class="category">UAI 2022</h2>
 
+  <center>
+
   {% include figure.html path="assets/img/news/uai22/1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
   {% include figure.html path="assets/img/news/uai22/3.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+
+  </center>
   <div class="row mt-3">
       <div class="col-sm mt-3 mt-md-0">
           {% include figure.html path="assets/img/news/uai22/4.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -85,13 +89,21 @@ nav_order: 7
 
   <h2 class="category">miscellaneuous</h2>
 
+  <center>
+
   {% include figure.html path="assets/photos/miscellaneous/0.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+
+  </center>
 
   <div class="caption">
     I was doing an internship and designing algorithms reverse engineering the 3D model of the object with point clouds. The scanning was a debug test and my face looks like snapped by Thanos.
   </div>
 
+  <center>
+
   {% include figure.html path="assets/photos/miscellaneous/1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+
+  </center>
 
   <div class="caption">
     When I was an undergraduate student, I wrote an algorithm with C++ and OpenCV that converts real-life images to an image only made of "string threads". It did not work everytime, but this was the most successful example from the photo of my pal Ziqi Gao (HKUST).
