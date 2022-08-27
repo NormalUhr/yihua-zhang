@@ -13,7 +13,7 @@ inline: false
 
 
     {% include figure.html path="assets/img/news/uai22/1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
-    {% include figure.html path="assets/img/news/uai22/1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.html path="assets/img/news/uai22/2.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
     {% include figure.html path="assets/img/news/uai22/3.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
     <div class="row mt-3">
         <div class="col-sm mt-3 mt-md-0">
