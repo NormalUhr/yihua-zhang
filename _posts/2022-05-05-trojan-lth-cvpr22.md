@@ -38,6 +38,7 @@ As models usually learn "too well" during training - so much that make various t
     display: inline-block;
     color: #999; font-size:18px；
     padding: 2px;">Figure 1. An overview of our proposal: Weight pruning identifies the ‘winning Trojan ticket’, which can be used for Trojan detection and recovery.</div>
+    <br><br>
 </center>
 
 
