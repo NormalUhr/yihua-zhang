@@ -36,7 +36,7 @@ Trojan features learned by backdoored attacks are significantly more stable agai
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="{{ site.url }}/assets/img/posts/backdoor_cvpr22/overview.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/posts/backdoor_cvpr22/overview.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
@@ -67,7 +67,7 @@ A sparse network with the peak Trojan Score maintains the highest ASR in the ext
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="{{ site.url }}/assets/img/posts/backdoor_cvpr22/pruning_dynamic.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/posts/backdoor_cvpr22/pruning_dynamic.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
@@ -76,11 +76,11 @@ A sparse network with the peak Trojan Score maintains the highest ASR in the ext
 
 ---
 
-#### Trigger Reverse Engineer across Different Datasets, Models, and Trojan Types
+#### Trojan Trigger Reverse Engineer 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="{{ site.url }}/assets/img/posts/backdoor_cvpr22/trigger_l1_norm.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/posts/backdoor_cvpr22/trigger_l1_norm.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
@@ -93,7 +93,7 @@ A sparse network with the peak Trojan Score maintains the highest ASR in the ext
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="{{ site.url }}/assets/img/posts/backdoor_cvpr22/recover_trigger_poster.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/posts/backdoor_cvpr22/recover_trigger_poster.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
