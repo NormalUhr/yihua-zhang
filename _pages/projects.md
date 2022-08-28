@@ -3,7 +3,7 @@ layout: page
 title: Projects
 permalink: /projects/
 description: Bricks of my research palace.
-nav: true
+nav: false
 nav_order: 3
 display_categories: [TrustworthyML, ScalableML]
 horizontal: False
