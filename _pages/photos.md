@@ -4,7 +4,7 @@ title: Photos
 permalink: /photos/
 description: You do not see my works. You see my life.
 nav: true
-nav_order: 7
+nav_order: 6
 ---
 
 <div class="projects">
