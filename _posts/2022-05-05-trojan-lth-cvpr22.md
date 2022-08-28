@@ -7,7 +7,7 @@ affiliation: "<sup>[1]</sup>University of Texas at Austin, <sup>[2]</sup>Michiga
 code: "https://github.com/VITA-Group/Backdoor-LTH"
 poster: "https://drive.google.com/file/d/1VnnC06NBoRCfSjw2RT91dKCeZ8iDEXCY/view?usp=sharing"
 paper: "https://www.google.com"
-tags: "Trustworthy ML"
+tags: "Trustworthy\ ML"
 categories: "paper"
 ---
 
