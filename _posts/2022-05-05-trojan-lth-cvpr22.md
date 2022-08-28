@@ -16,7 +16,7 @@ tags: "TrustworthyML"
 categories: "paper"
 ---
 
-## Motivation
+#### Motivation
 
 As models usually learn "too well" during training - so much that make various types of attacks possible, backdoor attack (or Trojan Attack) has become a real-life threat to the AI model deployed in the real world. At the same time, extensive research work on model pruning has shown that the weights of an overparameterized model (e.g., DNN) can be pruned without hampering its generalization ability. Combining both lines of research, our story begins with the following question:
 
@@ -24,24 +24,24 @@ As models usually learn "too well" during training - so much that make various t
 <b>
 
 How does the model sparsity relate to its train-time robustness against Trojan attacks?
-
 </b>
+<br>
 </center>
 
-## The Discovery of 'Winning Trojan Ticket'
+---
+
+#### The Discovery of 'Winning Trojan Ticket'
 
 Trojan features learned by backdoored attacks are significantly more stable against pruning than benign features. Therefore, Trojan attacks can be uncovered through the pruning dynamics of the Trojan model.
 
-<center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="{{ site.url }}/assets/img/posts/backdoor_cvpr22/overview.png" width="600">
-    <br>
-    <div style="color:orange;
-    display: inline-block;
-    color: #999; font-size:16px；
-    padding: 2px;">Figure 1. An overview of our proposal: Weight pruning identifies the ‘winning Trojan ticket’, which can be used for Trojan detection and recovery.</div>
-</center>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="{{ site.url }}/assets/img/posts/backdoor_cvpr22/overview.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure 1. An overview of our proposal: Weight pruning identifies the ‘winning Trojan ticket’, which can be used for Trojan detection and recovery.
+</div>
 
 Leveraging LTH-oriented iterative magnitude pruning (IMP), the ‘winning Trojan Ticket’ can be discovered, which preserves the Trojan attack performance while retaining chance-level performance on clean inputs.
 
@@ -51,7 +51,7 @@ The winning Trojan ticket can be detected by our proposed linear model connectiv
 
 ---
 
-## Trojan Score: Linear Mode Connectivity-based Trojan Indicator
+#### Trojan Score: Linear Mode Connectivity-based Trojan Indicator
 
 We adopt Linear Mode Connectivity [\[2\]](#refer-anchor-2) (LMC) to measure the stability of the Trojan ticket $$\phi := (m \odot \theta)$$ v.s. the $$k$$-step finetuned Trojan ticket $$\phi := (m \odot \theta^{(k)})$$.
 
@@ -65,48 +65,44 @@ where the first term denotes LMC and the second term an error baseline. $$\mathc
 
 A sparse network with the peak Trojan Score maintains the highest ASR in the extreme pruning regime and is termed as the Winning Trojan Ticket.
 
-
-<center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="{{ site.url }}/assets/img/posts/backdoor_cvpr22/pruning_dynamic.png" width="600">
-    <br>
-    <div style="color:orange;
-    display: inline-block;
-    color: #999; font-size:16px；
-    padding: 2px;">Figure 2. The pruning dynamics of Trojan ticket (dash line) and 10-step finetuned ticket (solid line) on CIFAR-10 with ResNet-20 and gray-scale backdoor trigger. For comparison, the Trojan score is also reported.</div>
-</center>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="{{ site.url }}/assets/img/posts/backdoor_cvpr22/pruning_dynamic.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure 2. The pruning dynamics of Trojan ticket (dash line) and 10-step finetuned ticket (solid line) on CIFAR-10 with ResNet-20 and gray-scale backdoor trigger. For comparison, the Trojan score is also reported.
+</div>
 
 ---
 
-## Trigger Reverse Engineer across Different Datasets, Models, and Trojan Types
+#### Trigger Reverse Engineer across Different Datasets, Models, and Trojan Types
 
-<center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="{{ site.url }}/assets/img/posts/backdoor_cvpr22/trigger_l1_norm.png" width="1000">
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999; font-size:16px；
-    padding: 2px;">Figure 3. The \(\ell_1\) norm values of recovered Trojan triggers for all labels. The plot title signifies network architecture, trigger type, and the images for reverse engineering on CIFAR-10. Class “1” is the true target label for Trojan attacks. Green check or red cross indicates whether the detected label (with the least \(\ell_1\) norm matches the true target label).</div>
-</center>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="{{ site.url }}/assets/img/posts/backdoor_cvpr22/trigger_l1_norm.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure 3. The \(\ell_1\) norm values of recovered Trojan triggers for all labels. The plot title signifies network architecture, trigger type, and the images for reverse engineering on CIFAR-10. Class “1” is the true target label for Trojan attacks. Green check or red cross indicates whether the detected label (with the least \(\ell_1\) norm matches the true target label).
+</div>
 
 ---
 
-## Trigger Reverse Engineer
+#### Trigger Reverse Engineer
 
-<center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="{{ site.url }}/assets/img/posts/backdoor_cvpr22/recover_trigger_poster.png" width="600">
-    <br>
-    <div style="color:orange; display: inline-block; color: #999; font-size:16px；padding: 2px;">Figure 4. Visualization of recovered Trojan trigger patterns from dense Trojan models (baseline) and winning Trojan tickets. ResNet-20s on CIFAR-10 with RGB triggers are used. The first column shows the random seed images used for trigger recovery.</div>
-</center>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="{{ site.url }}/assets/img/posts/backdoor_cvpr22/recover_trigger_poster.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure 4. Visualization of recovered Trojan trigger patterns from dense Trojan models (baseline) and winning Trojan tickets. ResNet-20s on CIFAR-10 with RGB triggers are used. The first column shows the random seed images used for trigger recovery.
+</div>
 
 ---
 
-## Citation
+#### Citation
 
 ```
 @inproceedings{chen2022quarantine,
@@ -119,7 +115,7 @@ A sparse network with the peak Trojan Score maintains the highest ASR in the ext
 ```
 ---
 
-## Reference
+#### Reference
 
 <div id="refer-anchor-1"></div> [1] Jonathan Frankle et al. “The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks.” ICLR 2019. 
 
