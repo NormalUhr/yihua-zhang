@@ -6,7 +6,7 @@ description: Bricks of my research palace.
 nav: false
 nav_order: 3
 display_categories: [TrustworthyML, ScalableML]
-horizontal: False
+horizontal: true
 ---
 
 <!-- pages/projects.md -->

@@ -1,10 +1,13 @@
 ---
 layout: page
 title: "Quarantine: Sparsity Can Uncover the Trojan Attack Trigger for Free"
-description: [CVPR22]
+description: "[CVPR22]"
 img: assets/img/posts/backdoor_cvpr22/overview.png
 importance: 1
+permalink: /projects/backdoor_cvpr22
+github: "https://github.com/VITA-Group/Backdoor-LTH"
 category: TrustworthyML
+
 ---
 
 #### Abstract
