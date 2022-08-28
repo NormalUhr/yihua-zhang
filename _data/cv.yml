@@ -45,7 +45,7 @@
   type: time_table
   contents:
     - title: <a href="https://github.com/NormalUhr/Fast_BAT">Fast-BAT</a>
-      year: 2015-now
+      year: 2021
       description: A fast bi-level optimization-based adversarial training framework.
 
 - title: Honors and Awards
