@@ -8,6 +8,18 @@ nav_order: 6
 ---
 
 <div class="projects">
+
+  <h2 class="category">INFORMS Annual Meeting 2022</h2>
+
+  <center>
+
+  {% include figure.html path="assets/img/news/INFORMS22/1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+  {% include figure.html path="assets/img/news/INFORMS22/2.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+  {% include figure.html path="assets/img/news/INFORMS22/3.jpeg" class="img-fluid rounded   z-depth-1" zoomable=true %}
+
+
+  </center>
+
   <h2 class="category">UAI 2022</h2>
 
   <center>
