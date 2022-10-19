@@ -58,20 +58,22 @@ Model sparsity has seen a lot of research interests these years, as reducing mod
 
 #### Reference
 
-<div id="refer-anchor-1"></div> [1] G. Zhang\*, S. Lu\*, <b>Y. Zhang</b>, X. Chen, P. Chen, Q. Fan, L. Martie, M. Hong, S. Liu, “Distributed Adversarial Training to Robustify Deep Neural Networks at Scale”, Conference on Uncertainty in Artificial Intelligence (UAI’22 - Best Paper Runner-up Award )
+<div id="refer-anchor-1"></div> [1] G. Zhang\*, S. Lu\*, <b>Y. Zhang</b>, X. Chen, P. Chen, Q. Fan, L. Martie, M. Hong, S. Liu, “Distributed Adversarial Training to Robustify Deep Neural Networks at Scale”, Conference on Uncertainty in Artificial Intelligence (UAI’22 - Best Paper Runner-up Award)
 
-<div id="refer-anchor-2"></div> [2] <b>Y. Zhang</b>*, G. Zhang*, P. Khanduri, M. Hong, S. Chang, S. Liu, “Fast-BAT: Revisiting and Advancing Fast Adversarial Training through the Lens of Bi-level Optimization”, International Conference on Machine Learning (ICML’22 )
+<div id="refer-anchor-2"></div> [2] <b>Y. Zhang</b>*, G. Zhang*, P. Khanduri, M. Hong, S. Chang, S. Liu, “Fast-BAT: Revisiting and Advancing Fast Adversarial Training through the Lens of Bi-level Optimization”, International Conference on Machine Learning (ICML’22)
 
-<div id="refer-anchor-3"></div> [3] T. Chen\*, Z. Zhang\*, <b>Y. Zhang</b>\*, Chang, S. Liu, W. Yang, “Quarantine: Sparsity Can Uncover the Trojan Attack Trigger for Free”, Computer Vision and Pattern Recognition Conference (CVPR’22 )
-<div id="refer-anchor-4"></div> [4] <b>Y. Zhang</b>\*, Y. Yao\*, P. Ram, P. Zhao, T. Chen, M. Hong, Y. Wang, S. Liu, “Advancing Model Pruning via Bi-level Optimization” (under review)
+<div id="refer-anchor-3"></div> [3] T. Chen\*, Z. Zhang\*, <b>Y. Zhang</b>\*, Chang, S. Liu, W. Yang, “Quarantine: Sparsity Can Uncover the Trojan Attack Trigger for Free”, Computer Vision and Pattern Recognition Conference (CVPR’22)
+<div id="refer-anchor-4"></div> [4] <b>Y. Zhang</b>\*, Y. Yao\*, P. Ram, P. Zhao, T. Chen, M. Hong, Y. Wang, S. Liu, “Advancing Model Pruning via Bi-level Optimization” (NeurIPS'22)
 
-<div id="refer-anchor-5"></div> [5]G. Zhang\*, Y. Zhang\*, Z. Zhang, W. Fan, Q. Li, S. Liu, S. Chang, “Fairness Reprogramming” (under review)
+<div id="refer-anchor-5"></div> [5]G. Zhang\*, <b>Y. Zhang</b>\*, Z. Zhang, W. Fan, Q. Li, S. Liu, S. Chang, “Fairness Reprogramming” (NeurIPS'22)
 
 <div id="refer-anchor-6"></div> [6 B. Hou, J. Jia, <b>Y. Zhang</b>, G. Zhang, Y. Zhang, S. Liu, S. Chang, "TextGrad: Advancing Robustness Evaluation in NLP by Gradient-Driven Optimization" (under review)
 
 <div id="refer-anchor-7"></div> [7] H. Li, S. Zhang, M. Wang, <b>Y. Zhang</b>, P. Chen, S. Liu, "Theoretical Characterization of Neural Network Generalization with Group Imbalance" (under review)
 
 <div id="refer-anchor-8"></div> [8] P. Khanduri, I. Tsaknakis, <b>Y. Zhang</b>, J. Liu, S. Liu, J. Zhang, M. Hong, "Linearly Constrained Bilevel Optimization: A Smoothed Implicit Gradient Approach" (under review)
+
+<div id="refer-anchor-9"></div> [9] <b>Y. Zhang</b>, P. Sharma, P. Ram, M. Hong, K. R. Varshney, S. Liu, "What Is Missing in IRM Training and Evaluation? Challenges and Solutions " (under review)
 
 
 
