@@ -13,9 +13,9 @@ nav_order: 6
 
   <center>
 
-  {% include figure.html path="assets/img/news/INFORMS22/1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
-  {% include figure.html path="assets/img/news/INFORMS22/2.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
-  {% include figure.html path="assets/img/news/INFORMS22/3.jpeg" class="img-fluid rounded   z-depth-1" zoomable=true %}
+  {% include figure.html path="assets/photos/INFORMS22/1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+  {% include figure.html path="assets/photos/INFORMS22/2.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+  {% include figure.html path="assets/photos/INFORMS22/3.jpeg" class="img-fluid rounded   z-depth-1" zoomable=true %}
 
 
   </center>
