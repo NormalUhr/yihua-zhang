@@ -76,7 +76,7 @@ blockquote {
 
 .post-description {
   margin-bottom: 2rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
   a {
     color: inherit;
     &:hover {
@@ -91,12 +91,13 @@ blockquote {
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid $grey-color-light;
+  border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
 }
 .navbar .dropdown-menu {
   background-color: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
   a:not(.active) {
     color: var(--global-text-color);
   }
