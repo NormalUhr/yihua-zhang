@@ -11,7 +11,7 @@ author: "<a style='color: #dfebf7' href='https://tianlong-chen.github.io/'>Tianl
 affiliation: "<sup>[1]</sup>University of Texas at Austin, <sup>[2]</sup>Michigan State University, <sup>[3]</sup>University of California, Santa Barbara, <sup>[4]</sup>MIT-IBM Watson AI Lab"
 code: "https://github.com/VITA-Group/Backdoor-LTH"
 poster: "https://drive.google.com/file/d/1VnnC06NBoRCfSjw2RT91dKCeZ8iDEXCY/view?usp=sharing"
-paper: "https://arxiv.org/pdf/2205.11819.pdf"
+paper: "https://www.google.com"
 tags: "TrustworthyML"
 categories: "paper"
 ---
