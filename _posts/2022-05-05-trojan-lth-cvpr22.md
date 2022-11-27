@@ -1,195 +1,107 @@
 ---
 layout: paper
-title:  "[NeurIPS22] Advancing Model Pruning via Bi-level Optimization"
-date: 2022-11-27 21:00:00
-author: "
-         <a style='color: #dfebf7' href='https://www.yihua-zhang.com/'>Yihua Zhang</a><sup>[1]</sup>*,
-         <a style='color: #dfebf7' href='https://www.cse.msu.edu/~yaoyugua/'>Yuguang Yao</a><sup>[1]</sup>*,
-         <a style='color: #dfebf7' href='https://rithram.github.io/'>Parikshit Ram</a><sup>[2]</sup>,
-         <a style='color: #dfebf7' href='https://puzhao.info/'>Zhao Pu</a><sup>[3]</sup>,
-         <a style='color: #dfebf7' href='https://tianlong-chen.github.io/about/'>Tianlong Chen</a><sup>[4]</sup>,
-         <a style='color: #dfebf7' href='https://people.ece.umn.edu/~mhong/mingyi.html'>Mingyi Hong</a><sup>[5]</sup>,
-         <a style='color: #dfebf7' href='https://web.northeastern.edu/yanzhiwang/'>Yanzhi Wang</a><sup>[3]</sup>,
-         <a style='color: #dfebf7' href='https://lsjxjtu.github.io/'>Sijia Liu</a><sup>[1,2]</sup>"
-affiliation: "<sup>[1]</sup>Michigan State University, <sup>[2]</sup>IBM Research, <sup>[3]</sup>Northeastern University, <sup>[4]</sup>University of Texas at Austin, <sup>[5]</sup>University of Minnesota, Twin City"
-code: "https://github.com/OPTML-Group/BiP"
-poster: "https://www.yihua-zhang.com/assets/posters/bip.jpg"
-paper: "https://arxiv.org/pdf/2210.04092.pdf"
-tags: "ScalableML"
+title:  "[CVPR22] Quarantine: Sparsity Can Uncover the Trojan Attack Trigger for Free"
+date: 2022-06-21 21:00:00
+author: "<a style='color: #dfebf7' href='https://tianlong-chen.github.io/'>Tianlong Chen</a><sup>[1]</sup>*, 
+         <a style='color: #dfebf7' href='https://scholar.google.com/citations?user=ZLyJRxoAAAAJ&hl=zh-CN'>Zhenyu Zhang</a><sup>[1]</sup>*, 
+         <a style='color: #dfebf7' href='https://www.yihua-zhang.com/'>Yihua Zhang</a><sup>[2]</sup>*, 
+         <a style='color: #dfebf7' href='https://code-terminator.github.io/'>Shiyu Chang</a><sup>[3]</sup>, 
+         <a style='color: #dfebf7' href='https://lsjxjtu.github.io/'>Sijia Liu</a><sup>[2,4]</sup>, 
+         <a style='color: #dfebf7' href='https://vita-group.github.io/'>Zhangyang Wang</a><sup>[1]</sup>"
+affiliation: "<sup>[1]</sup>University of Texas at Austin, <sup>[2]</sup>Michigan State University, <sup>[3]</sup>University of California, Santa Barbara, <sup>[4]</sup>MIT-IBM Watson AI Lab"
+code: "https://github.com/VITA-Group/Backdoor-LTH"
+poster: "https://drive.google.com/file/d/1VnnC06NBoRCfSjw2RT91dKCeZ8iDEXCY/view?usp=sharing"
+paper: "https://arxiv.org/pdf/2205.11819.pdf"
+tags: "TrustworthyML"
 categories: "paper"
 ---
 
-#### Dilemma in Model Pruning: Effective or Efficient?
+#### Motivation
 
-Among the many powerful pruning methods, Iterative Magnitude Pruning (IMP) is one of the most significant and popular methods, which prunes the model in an iterative manner and can reach extremely sparse level without any performance loss. However, it often consumes much more than training a dense model from scratch. In contrast, efficient one-shot pruning methods can not deliver a high-quality sparse subnetwork, as shown in Figure 1.
-Therefore, existing pruning methods have reached a dilemma over choosing between the effective method and the efficient method.
-
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/posts/bip_nips22/dilemma.png" title="Dilemma in Pruning" class="img-fluid rounded z-depth-1" zoomable=true %}
-    </div>
-</div>
-<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure 1. The dilemma in model pruning: Powerful pruning methods (e.g., IMP) suffer from high computational overhead.
-</div>
-
+As models usually learn "too well" during training - so much that make various types of attacks possible, backdoor attack (or Trojan Attack) has become a real-life threat to the AI model deployed in the real world. At the same time, extensive research work on model pruning has shown that the weights of an overparameterized model (e.g., DNN) can be pruned without hampering its generalization ability. Combining both lines of research, our story begins with the following question:
 
 <center>
 <b>
-How to advance the optimization foundation of model pruning to achieve high accuracy and pruning efficiency?
+
+How does the model sparsity relate to its train-time robustness against Trojan attacks?
 </b>
 <br>
 </center>
 
 ---
 
-#### Model Pruning as a Bi-level Optimization Problem
+#### The Discovery of 'Winning Trojan Ticket'
 
-We start our research by revisiting the model pruning problem and reformulate it to a bi-level optimization (BLO) problem:
+We start our research by making an observation on the performance change of a backdoored model as we gradually increase the model sparsity with the model pruning technique. More specifically, we would like to see how the clean accuracy (CA) as well as attack success rate (ASR) will change with respect to the increasing sparsity. We plot the curve of CA and ASR w.r.t. sparsity ratio in Figure 1. Some interesting phenomena we listed below indicate that there is a strong connection between model sparsity and Trojan features.
 
+As ASR is constantly higher than CA, and CA drops much faster than ASR, Trojan features learned by backdoored attacks are significantly more stable against pruning than benign features. Therefore, we assume that "Trojan attacks can be uncovered through the pruning dynamics of the Trojan model". The question remains: how to leverage the 'stubbornness' of the Trojan features to detect the Trojan attack itself?
 
-$$
- \min_{\mathbf{m} \in \mathcal{S}} \ell(\mathbf{m} \odot \boldsymbol\theta^{\ast}(\mathbf{m})) \quad \quad \text{subject to} \,\,\, \boldsymbol\theta^{\ast}(\mathbf{m}) = \text{argmin}_{\boldsymbol\theta \in \mathbb{R}^n}\, \ell(\mathbf{m} \odot \boldsymbol\theta + \frac{\gamma}{2}\|\boldsymbol\theta\|_2^2),
-$$
+As we further increase the model sparsity, both ASR and CA reasonably fall to a relatively low level. However, at a certain sparsity level, the ASR surges to a conspicuously high level while the CA remains low, which we term the 'winning Trojan Ticket', borrowing the idea from LTH-oriented [\[1\]](#refer-anchor-1) iterative magnitude pruning. The performance of the winning Trojan Ticket implies that such a model subnetwork preserves the Trojan attack traces while retaining chance-level performance on clean inputs. In other words, it is a 'purely bad' subnetwork.
 
-where the upper-level problem optimizes the pruning mask for the model and the lower-level retrains the model with the fixed mask. The benifits from this bi-level formulation are two-folded.
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/posts/backdoor_cvpr22/overview.png" title="example image" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure 1. An overview of our proposal: Trojan features learned by backdoored attacks are significantly more stable against pruning than benign features. Therefore, Trojan attacks can be uncovered through the pruning dynamics of the Trojan model. Weight pruning identifies the ‘winning Trojan ticket’, which can be used for Trojan detection and recovery. 
+</div>
 
-* First, we have the flexibility to use the mismatched pruning and retraining objectives.
+Leveraging LTH-oriented iterative magnitude pruning (IMP), the ‘winning Trojan Ticket’ can be discovered, which preserves the Trojan attack performance while retaining chance-level performance on clean inputs.
 
-* Second, the bi-level optimization enables us to explicitly optimize the coupling between the retrained model weights and the pruning mask through the implicit gradient (IG)-based optimization routine.
+Thus, the existence of the 'winning Trojan Ticket' could serve as an indicator of Trojan attacks. However, in real-world applications, it is hard for the users to acquire the ASR (namely the red curve in Figure 1), as the attack information is transparent to the users. Thus, we need to find a substitute indicator for ASR, which does not require any attack information or even clean data.
 
-
-#### Optimization Foundation of BIP
-
-BLO is different from other optimization problems, as the gradient descent of the upper-level variable will involve the calculation of the implicit gradient (IG).
-
-$$
-\frac{d\ell(\mathbf{m}\odot\boldsymbol\theta^\ast(\mathbf{m}))}{d\mathbf{m}} = \nabla_{\mathbf{m}}\ell(\mathbf{m}\odot\boldsymbol\theta^\ast(\mathbf{m})) + \frac{d{\boldsymbol\theta^\ast(\mathbf{m})}^\top}{d\mathbf{m}} \nabla_{\boldsymbol\theta}\ell(\mathbf{m}\odot\boldsymbol\theta^\ast(\mathbf{m}))
-$$
-
-The IG challenge is a fingerprint of the BLO solver and derives from the implicit function theory. It refers to the gradient of the lower-level solution w.r.t. the upper-level variable and in most cases is very difficult to calculate. The main reason is it usually involves the second order derivative and matrix inversion.
-
-$$
-\frac{d{\boldsymbol\theta^\ast(\mathbf{m})}^\top}{d\mathbf{m}} = -\nabla^2_{\mathbf{m}\boldsymbol\theta}\ell(\mathbf{m}\odot\boldsymbol\theta^\ast)[\nabla^2_{\boldsymbol\theta}\ell(\mathbf{m}\odot\boldsymbol\theta^\ast) + \gamma \mathbf{I}]^{-1}
-$$
-
-Very luckily, in the model pruning scenario, the upper- and lower-level variables are always combined as a bi-linear variable. We can thus leverage this bi-linear properties and derive a closed-form IG solution, which only requires the first-order derivative.
-
-$$
-\frac{{\boldsymbol\theta^\ast(\mathbf{m})}^\top}{d\mathbf{m}} = -\frac{1}{\gamma}\text{diag}(\left.\nabla_{\mathbf{z}}\ell(\mathbf{z})\right|_{\mathbf{z} = \mathbf{m} \odot \boldsymbol\theta^\ast})
-$$
-
-This also makes our later proposed bi-level pruning algorithm a purely first-order method.
+The winning Trojan ticket can be detected by our proposed linear model connectivity (LMC)-based Trojan score.
 
 ---
 
-#### BiP: Bi-level Optimization-based Pruning
+#### Trojan Score: Linear Mode Connectivity-based Trojan Indicator
 
-We propose our bi-level pruning algorithm (BiP). We adopt the alternating optimization procedure by updating the upper- and lower-variable in turn.
+We adopt Linear Mode Connectivity [\[2\]](#refer-anchor-2) (LMC) to measure the stability of the Trojan ticket $$\phi := (m \odot \theta)$$ v.s. the $$k$$-step finetuned Trojan ticket $$\phi := (m \odot \theta^{(k)})$$.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/posts/bip_nips22/algorithm.png" title="BiP algorithm overview" class="img-fluid rounded z-depth-1" zoomable=true%}
-    </div>
-</div>
-<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure 2. The pseudo-code for Bi-level Pruning (BiP) Algorithm.
-</div>
+We define the Trojan Score as
 
-##### More details of BiP
+$$
+    \mathcal{S}_{Trojan} = \max_{\alpha \in [0, 1]} \mathcal{E} (\alpha \phi - (1 - \alpha)\phi_{k}) - \frac{\mathcal{\phi} - \mathcal{\phi_k}}{2}
+$$
 
-We show the illustration of BiP algorithm in Figure 3 below. We start with a pretrained model and some mask initialization. For the lower-level, we use stochastic gradient descent to update the model parameter with the fixed mask.
-For the upper-level, as the mask is supposed to contain either 0 or 1, representing whether a parameter should be removed or retained, we first relax the “binary”masking “variables” to “continuous” masking “scores”, which can be updated with auto-differentiation in most of the deep learning algorithms. In the forward path, we project the scores onto the discrete constraint using hard thresholding, where the top k elements are set to 1s and the others to 0s. Thus, we summarize our upper-level problem as a stochastic projected gradient descent, in short SPGD. 
+where the first term denotes LMC and the second term an error baseline. $$\mathcal{E}(\phi)$$ denotes the training error of the model $$\phi$$.
+
+A sparse network with the peak Trojan Score maintains the highest ASR in the extreme pruning regime and is termed as the Winning Trojan Ticket.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/posts/bip_nips22/bip_overview.png" title="BiP algorithm visualization" class="img-fluid rounded z-depth-1" zoomable=true%}
+        {% include figure.html path="assets/img/posts/backdoor_cvpr22/pruning_dynamic.png" title="example image" class="img-fluid rounded z-depth-1" zoomable=true%}
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure 3. An illustration of the proposed BiP algorithm.
-</div>
-
-
-##### Comparison to IMP and OMP
-
-We also show the illustration of the iterative magnitude pruning (IMP) and one-shot magnitude pruning (OMP) below for comparison.
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/posts/bip_nips22/imp.png" title="BiP algorithm overview" class="img-fluid rounded z-depth-1" zoomable=true%}
-    </div>
-</div>
-<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure 4. Pruning pipeline visualization of IMP.
-</div>
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/posts/bip_nips22/omp.png" title="BiP algorithm overview" class="img-fluid rounded z-depth-1" zoomable=true%}
-    </div>
-</div>
-<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure 5. Pruning pipeline visualization of OMP.
+    Figure 2. The pruning dynamics of Trojan ticket (dash line) and 10-step finetuned ticket (solid line) on CIFAR-10 with ResNet-20 and gray-scale backdoor trigger. For comparison, the Trojan score is also reported.
 </div>
 
 ---
 
-#### Experiment results
-
-##### BIP identifies high-accuracy subnetworks in unstructured pruning
-
-In Figure 6 below, we show the unstructured pruning trajectory (given by test accuracy vs. pruning ratio) of BIP and baseline methods in 8 model-dataset setups. BiP outperforms its baselines in nearly all the settings, and also finding the sparsest winning tickets nearly every time. For some settings like CIFAR-10 with model VGG-16, BiP is even capable of finding winning tickets with pruning ratio over 90%
+#### Trojan Trigger Reverse Engineer 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/posts/bip_nips22/exp_unstructured_pruning.png" title="Unstructured pruning result." class="img-fluid rounded z-depth-1" zoomable=true%}
+        {% include figure.html path="assets/img/posts/backdoor_cvpr22/trigger_l1_norm.png" title="example image" class="img-fluid rounded z-depth-1" zoomable=true%}
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure 6. Unstructured pruning trajectory given by test accuracy (%) vs. sparsity (%) on various (dataset, model) pairs. The performance of the dense model and the best winning ticket are marked using dashed lines in each plot. The solid line and shaded area of each pruning method represent the mean and variance of test accuracies over 3 trials.
+    Figure 3. The \(\ell_1\) norm values of recovered Trojan triggers for all labels. The plot title signifies network architecture, trigger type, and the images for reverse engineering on CIFAR-10. Class “1” is the true target label for Trojan attacks. Green check or red cross indicates whether the detected label (with the least \(\ell_1\) norm matches the true target label).
 </div>
 
-##### BIP identifies high-accuracy subnetworks in structured pruning
+---
 
-Similar phenomenon can be observed in the structured pruning setting as well.
+#### Trigger Reverse Engineer
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/posts/bip_nips22/exp_structured_pruning.png" title="Structured pruning result." class="img-fluid rounded z-depth-1" zoomable=true%}
+        {% include figure.html path="assets/img/posts/backdoor_cvpr22/recover_trigger_poster.png" title="example image" class="img-fluid rounded z-depth-1" zoomable=true%}
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure 7. Filter-wise pruning trajectory given by test accuracy (%) vs. sparsity (%). Other settings strictly follow Figure 3.
-</div>
-
-##### BiP achieves high pruning efficiency.
-
-Next, we show the high efficiency of BiP compared to the state-of-the-art IMP method [\[1\]](#refer-anchor-1). As we have longed for, BiP consumes sparsity-agnostic time consumptions just like the one-shot pruning methods and can be 3~7 times faster than IMP.
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/posts/bip_nips22/exp_time.png" title="Structured pruning result." class="img-fluid rounded z-depth-1" zoomable=true%}
-    </div>
-</div>
-<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure 8. Time consumption comparison on (CIFAR-10, ResNet-18) with different pruning ratio p.
-</div>
-
-
-##### BiP requires no rewinding.
-
-Another advantage of BIP is that it insensitive to model rewinding to
-find matching subnetworks. Recall that rewinding is a strategy used in Lottery Ticket Hypothesis [\[2\]](#refer-anchor-2) to determine what model initialization should be used for retraining a pruned model. In Figure 9, we show the test accuracy of the BIP-pruned model when it is retrained at different rewinding epochs under various datasets and model architectures. As we can see, a carefully-tuned rewinding scheme does not lead to a significant improvement over BIP without retraining. This suggests that the subnetworks found by BIP are already of high quality and does not require any rewinding operation.
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/posts/bip_nips22/no_rewinding.png" title="BiP requires no rewinding." class="img-fluid rounded z-depth-1" zoomable=true%}
-    </div>
-</div>
-<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure 9. The sensitivity of BIP to rewinding epoch numbers on different datasets and model architectures. "N/A" in the x-axis indicates BIP without retraining.
+    Figure 4. Visualization of recovered Trojan trigger patterns from dense Trojan models (baseline) and winning Trojan tickets. ResNet-20s on CIFAR-10 with RGB triggers are used. The first column shows the random seed images used for trigger recovery.
 </div>
 
 ---
@@ -197,17 +109,20 @@ find matching subnetworks. Recall that rewinding is a strategy used in Lottery T
 #### Citation
 
 ```
-@inproceedings{zhang2022advancing,
-  title = {Advancing Model Pruning via Bi-level Optimization},
-  author = {Zhang, Yihua and Yao, Yuguang and Ram, Parikshit and Zhao, Pu and Chen, Tianlong and Hong, Mingyi and Wang, Yanzhi and Liu, Sijia},
-  booktitle = {Advances in Neural Information Processing Systems},
+@inproceedings{chen2022quarantine,
+  title = {Quarantine: Sparsity Can Uncover the Trojan Attack Trigger for Free},
+  author = {Chen, Tianlong and Zhang, Zhenyu and Zhang, Yihua and Chang, Shiyu and Liu, Sijia and Wang, Zhangyang},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages = {598--609},
   year = {2022}
 }
 ```
 ---
 
-#### Reference 
+#### Reference
 
-<div id="refer-anchor-2"></div> [1] Xiaolong Ma et al. “Sanity Checks for Lottery Tickets: Does Your Winning Ticket Really Win the Jackpot?” NeurIPS 2021.
+<div id="refer-anchor-1"></div> [1] Jonathan Frankle et al. “The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks.” ICLR 2019. 
 
-<div id="refer-anchor-1"></div> [2] Jonathan Frankle et al. “The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks.” ICLR 2019.
+<div id="refer-anchor-2"></div> [2] Jonathan Frankle et al. “Linear Mode Connectivity and the Lottery Ticket Hypothesis.” ICML 2020.
+
+<div id="refer-anchor-3"></div> [3] Ren Wang et al. “Practical detection of trojan neural networks: Data-limited and data-free cases.” ECCV 2020.
