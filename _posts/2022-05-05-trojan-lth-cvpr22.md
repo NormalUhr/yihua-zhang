@@ -13,7 +13,7 @@ code: "https://github.com/VITA-Group/Backdoor-LTH"
 poster: "https://www.yihua-zhang.com/assets/posters/trojan_lth.pdf"
 paper: "https://github.com/VITA-Group/Backdoor-LTH"
 tags: "TrustworthyML"
-categories: "paper"
+categories: "cvpr22"
 ---
 
 #### Motivation

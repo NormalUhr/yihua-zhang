@@ -1,0 +1,148 @@
+---
+layout: paper
+title:  "[NeurIPS22] Fairness Reprogramming"
+date: 2022-11-26 21:00:00
+author: "<a style='color: #dfebf7' href='https://ghzhang233.github.io/'>Guanhua Zhang</a><sup>[1]</sup>*,
+         <a style='color: #dfebf7' href='https://www.yihua-zhang.com/'>Yihua Zhang</a><sup>[2]</sup>*,
+         <a style='color: #dfebf7' href='https://https://scholar.google.com/citations?hl=zh-CN&user=_-5PSgQAAAAJ/'>Yang Zhang</a><sup>[3]</sup>,
+         <a style='color: #dfebf7' href='https://wenqifan03.github.io/'>Wenqi Fan</a><sup>[4]</sup>,
+         <a style='color: #dfebf7' href='https://scholar.google.com/citations?hl=zh-CN&user=XRB2rKIAAAAJ'>Qing Li</a><sup>[4]</sup>,
+         <a style='color: #dfebf7' href='https://lsjxjtu.github.io/'>Sijia Liu</a><sup>[2,4]</sup>"
+affiliation: "<sup>[1]</sup>University of Santa Barbara, <sup>[2]</sup>Michigan State University, <sup>[3]</sup>MIT-IBM Watson AI Lab, <sup>[4]</sup>The Hong Kong Polytechnic University"
+code: "https://github.com/OPTML-Group/Fairness-Reprogramming"
+poster: "https://www.yihua-zhang.com/assets/posters/fairness_reprogramming.pdf"
+paper: "https://arxiv.org/pdf/2209.10222.pdf"
+tags: "TrustworthyML"
+categories: "neurips22"
+---
+
+#### Fairness Reprogramming: Overview
+
+In this paper, we propose a new generic fairness learning paradigm,
+called fairness reprogramming: 
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/posts/fairness_nips22/overview.png" title="Dilemma in Pruning" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure 1. An example of fairness reprogramming in CV and NLP tasks. The inputagnostic trigger can promote fairness without altering the pretrained model.
+</div>
+
+---
+
+<center>
+<b>
+Can an unfair model be reprogrammed to fair one?
+If so, why and how would it work?
+</b>
+<br>
+</center>
+
+---
+
+#### Experiment results
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/posts/fairness_nips22/main_results.png" title="Main results." class="img-fluid rounded z-depth-1" zoomable=true%}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure x. Results on (a) Civil Comments and (b) CelebA. We report the negative DP (left) and the negative EO (right) scores. For each method, we vary the trade-off parameter λ to record the performance. The closer a dot to the upper-right corner, the better the model is. 
+</div>
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/posts/fairness_nips22/tuning_ratio.png" title="Tuning ratio." class="img-fluid rounded z-depth-1" zoomable=true%}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure x. Results on (a) Civil Comments and (b) CelebA with different tuning data ratio. We report the negative DP (left) and negative EO (right) scores. We consider a fixed BASE model trained with training set, whose negative bias scores are presented as a black dashed line. Then we train other methods with different tuning data ratio to promote fairness of the BASE model.
+</div>
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/posts/fairness_nips22/transfer.png" title="Transfer setting." class="img-fluid rounded z-depth-1" zoomable=true%}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure x. Results in the transfer setting. We report negative DP (left) and negative EO (right) scores. The triggers are firstly trained in a BASE model. Then, we evaluate the triggers based on another unseen BASE model. We change the parameter λ to trade-off accuracy with fairness and draw the curves in the same way with Fig. y.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/posts/fairness_nips22/multi_class.png" title="Multi-class setting." class="img-fluid rounded z-depth-1" zoomable=true%}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure x. Performance of multi-class classification. For (a) and (b), we use the attributes Blond Hair, Smiling, Attractive for multi-class construction. We add an addition attribute Wavy Hair for (c) and (d).
+</div>
+
+---
+
+#### Why does Fairness Trigger work?
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/posts/fairness_nips22/why_works.png" title="Trigger demographic information." class="img-fluid rounded z-depth-1" zoomable=true%}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure x. Illustration of why fairness trigger works. (a) The data generation process. (b) The information flow from data to the classifier through the sufficient statistics. (c) Fairness trigger strongly indicative of a demographic group can confuse the classifier with a false demographic posterior, and thus preventing the classifier from using the correct demographic information.
+</div>
+
+##### Input Saliency Analysis
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/posts/fairness_nips22/gradcam.png" title="Grad Cam." class="img-fluid rounded z-depth-1" zoomable=true%}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure x. Gradient-based saliency map visualized with GRAD CAM of different methods. The highlighted zones (marked in red) depicting regions exerting major influence on the predicted labels (non-blond hair v.s. blond hair) in each row, which also depict the attention of the model on the input image.
+</div>
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/posts/fairness_nips22/integrated_grad.png" title="Integrated Gradient." class="img-fluid rounded z-depth-1" zoomable=true%}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure x. A text example from Civil Comments with Integrated Gradient highlighting important words that influence ERM model predictions. The text is concatenated with three triggers generated with different adversary weight. Green highlights the words that lean to toxic predictions and red highlights non-toxic leaning words. The model prediction tends to be correct after adding the triggers.
+</div>
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/posts/fairness_nips22/why_works.png" title="Trigger demographic information." class="img-fluid rounded z-depth-1" zoomable=true%}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure x. Predictions of the demographic classifier on a null input with triggers generated by different λ. The demographic prediction for CV triggers indicate the predicted score for Male and Female, and it is Christian, Muslim and Other religion for NLP.
+</div>
+
+
+---
+
+#### Citation
+
+```
+@inproceedings{zhang2022fairness,
+  title = {Fairness reprogramming},
+  author = {Zhang, Guanhua and Zhang, Yihua and Zhang, Yang and Fan, Wenqi and Li, Qing and Liu, Sijia and Chang, Shiyu},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year = {2022}
+}
+```
+---
+
+#### Reference 
+
+<div id="refer-anchor-2"></div> [1] Xiaolong Ma et al. “Sanity Checks for Lottery Tickets: Does Your Winning Ticket Really Win the Jackpot?” NeurIPS 2021.
+
+<div id="refer-anchor-1"></div> [2] Jonathan Frankle et al. “The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks.” ICLR 2019.
