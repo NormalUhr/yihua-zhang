@@ -44,6 +44,20 @@ If so, why and how would it work?
 
 #### Fairness Reprogramming
 
+The goal of fairness reprogramming is to improve the fairness of the classifier by modifying the input \[\mathbf{X}\] while keeping the classifier's weights \[\boldsymbol\theta\] fixed. In particular, we aim to achieve either of the following fairness criteria.
+
+* Equalized Odds:
+
+$$
+\hat{Y} \perp Z | Y, \quad
+$$
+
+* Demographic Parity:
+
+$$
+\hat{Y} \perp Z
+$$
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/posts/fairness_nips22/algorithm.png" title="Algorithm." class="img-fluid rounded z-depth-1" zoomable=true%}
