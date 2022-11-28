@@ -71,7 +71,26 @@ $$
 \tilde{\mathbf{X}} = m(\mathbf{X}; \boldsymbol\theta, \boldsymbol \delta) = [\boldsymbol \delta, g(\mathbf{X}; \boldsymbol\theta)],
 $$
 
-where $\tilde{\mathbf{X}}$ denotes the modified input; $[\dot]$ denotes vector concatenation.
+where $\tilde{\mathbf{X}}$ denotes the modified input; $[\dot]$ denotes vector concatenation (see Figure 1).
+
+##### Optimization Objective and Discriminator
+
+Our optimization objective is as follows
+
+$$
+\min_{\boldsymbol\theta, \boldsymbol\delta} \,\,\, \mathcal{L}_{\text{util}} (\mathcal{D}_{\text{tune}}, f^* \circ m) + \lambda \mathcal{L}_{\text{fair}} (\mathcal{D}_{\text{tune}}, f^* \circ m),
+$$
+
+where ${\mathcal{D}_{tune}}$ represents the dataset that are used to train the fairness trigger.
+
+The first loss term, ${\mathcal{L}_{\text{util}}}$, is the utility loss function of the task. For classification tasks, ${\mathcal{L}_{\text{util}}}$ is usually the cross-entropy loss, _i.e._,:
+
+$$
+\mathcal{L}_{\text{util}}(\mathcal{D}_{\text{tune}}, f^* \circ m) = \mathbb{E}_{\bm X, Y \sim \mathcal{D}_{\text{tune}}} [\textrm{CE}(Y, f^*(m(\bm X)))],$$
+$$
+
+The second loss term, $\mathcal{L}_{fair}$, encourages the prediction to follow the fairness criteria and should measure how much information about $Z$ is in $\hat{Y}$. Thus, we introduce another network, the discriminator, $d(\cdot; \bm \phi)$, where $\bm \phi$ represents its parameters.
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
