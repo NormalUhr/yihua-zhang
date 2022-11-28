@@ -44,19 +44,34 @@ If so, why and how would it work?
 
 #### Fairness Reprogramming
 
-The goal of fairness reprogramming is to improve the fairness of the classifier by modifying the input \[\mathbf{X}\] while keeping the classifier's weights \[\boldsymbol\theta\] fixed. In particular, we aim to achieve either of the following fairness criteria.
+Consider a classification task, where $\mathbf{X}$ represents the input feature and ${Y}$ represents the output label. There exists some sensitive attributes or demographic group, $Z$, that may be spuriously
+correlated with $Y$. There is a pre-trained classifier, $f^*(\dot)$ that predicts $Y$ from $\mathbf{X}$, _i.e._, $\hat{Y} = f^*(\mathbf{X})$.
+
+The goal of fairness reprogramming is to improve the fairness of the classifier by modifying the input $\mathbf{X}$, while keeping the classifier's weights $\boldsymbol\theta$ fixed. In particular, we aim to achieve either of the following fairness criteria.
 
 * Equalized Odds:
 
 $$
-\hat{Y} \perp Z | Y, \quad
+\hat{Y} \perp Z | Y,
 $$
 
 * Demographic Parity:
 
 $$
-\hat{Y} \perp Z
+\hat{Y} \perp Z,
 $$
+
+where $\perp$ denotes independence.
+
+##### Fairness Trigger
+
+The reprogramming primarily involves appending a fairness trigger to the input. Formally, the input modification takes the following generic form:
+
+$$
+\tilde{\mathbf{X}} = m(\mathbf{X}; \boldsymbol\theta, \boldsymbol \delta) = [\boldsymbol \delta, g(\mathbf{X}; \boldsymbol\theta)],
+$$
+
+where $\tilde{\mathbf{X}}$ denotes the modified input; $[\dot]$ denotes vector concatenation.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
