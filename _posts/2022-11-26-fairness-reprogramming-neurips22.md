@@ -103,7 +103,7 @@ If so, why and how would it work?
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure x. Gradient-based saliency map visualized with GRAD CAM of different methods. The highlighted zones (marked in red) depicting regions exerting major influence on the predicted labels (non-blond hair v.s. blond hair) in each row, which also depict the attention of the model on the input image.
+    Figure x. Gradient-based saliency map visualized with GRAD CAM [\[1\]](#refer-anchor-1) of different methods. The highlighted zones (marked in red) depicting regions exerting major influence on the predicted labels (non-blond hair v.s. blond hair) in each row, which also depict the attention of the model on the input image.
 </div>
 
 
@@ -113,7 +113,7 @@ If so, why and how would it work?
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure x. A text example from Civil Comments with Integrated Gradient highlighting important words that influence ERM model predictions. The text is concatenated with three triggers generated with different adversary weight. Green highlights the words that lean to toxic predictions and red highlights non-toxic leaning words. The model prediction tends to be correct after adding the triggers.
+    Figure x. A text example from Civil Comments with Integrated Gradient[\[2\]](#refer-anchor-2)[\[3\]](#refer-anchor-3) highlighting important words that influence ERM model predictions. The text is concatenated with three triggers generated with different adversary weight. Green highlights the words that lean to toxic predictions and red highlights non-toxic leaning words. The model prediction tends to be correct after adding the triggers.
 </div>
 
 
@@ -143,6 +143,8 @@ If so, why and how would it work?
 
 #### Reference 
 
-<div id="refer-anchor-2"></div> [1] Xiaolong Ma et al. “Sanity Checks for Lottery Tickets: Does Your Winning Ticket Really Win the Jackpot?” NeurIPS 2021.
+<div id="refer-anchor-1"></div> [1] Ramprasaath R Selvaraju et al. “Grad-cam: Visual explanations from deep networks via gradientbased localization” ICCV 2017.
 
-<div id="refer-anchor-1"></div> [2] Jonathan Frankle et al. “The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks.” ICLR 2019.
+<div id="refer-anchor-2"></div> [2] Mukund Sundararajan et al. “Axiomatic attribution for deep networks” ArXiv, vol. abs/1703.01365, 2017.
+
+<div id="refer-anchor-3"></div> [3] Narine Kokhlikyan et al. “Captum: A unified and generic model interpretability library for pytorch” arXiv preprint arXiv:2009.07896.
