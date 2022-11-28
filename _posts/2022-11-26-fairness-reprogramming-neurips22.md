@@ -44,7 +44,7 @@ If so, why and how would it work?
 
 #### Fairness Reprogramming
 
-Consider a classification task, where $\mathbf{X}$ represents the input feature and $Y$ represents the output label. There exists some sensitive attributes or demographic group, $Z$, that may be spuriously
+Consider a classification task, where \(\mathbf{X}\) represents the input feature and $Y$ represents the output label. There exists some sensitive attributes or demographic group, $Z$, that may be spuriously
 correlated with $Y$. There is a pre-trained classifier, $f^*(\dot)$ that predicts $Y$ from $\mathbf{X}$, _i.e._, $\hat{Y} = f^*(\mathbf{X})$.
 
 The goal of fairness reprogramming is to improve the fairness of the classifier by modifying the input $\mathbf{X}$, while keeping the classifier's weights $\boldsymbol\theta$ fixed. In particular, we aim to achieve either of the following fairness criteria.
