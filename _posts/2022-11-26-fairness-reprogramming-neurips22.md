@@ -103,7 +103,7 @@ If so, why and how would it work?
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure x. Gradient-based saliency map visualized with GRAD CAM [\[1\]](#refer-anchor-1) of different methods. The highlighted zones (marked in red) depicting regions exerting major influence on the predicted labels (non-blond hair v.s. blond hair) in each row, which also depict the attention of the model on the input image.
+    Figure x. Gradient-based saliency map visualized with GRAD CAM of different methods. The highlighted zones (marked in red) depicting regions exerting major influence on the predicted labels (non-blond hair v.s. blond hair) in each row, which also depict the attention of the model on the input image.
 </div>
 
 
@@ -113,7 +113,7 @@ If so, why and how would it work?
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure x. A text example from Civil Comments with Integrated Gradient[\[2\]](#refer-anchor-2)[\[3\]](#refer-anchor-3) highlighting important words that influence ERM model predictions. The text is concatenated with three triggers generated with different adversary weight. Green highlights the words that lean to toxic predictions and red highlights non-toxic leaning words. The model prediction tends to be correct after adding the triggers.
+    Figure x. A text example from Civil Comments with Integrated Gradient highlighting important words that influence ERM model predictions. The text is concatenated with three triggers generated with different adversary weight. Green highlights the words that lean to toxic predictions and red highlights non-toxic leaning words. The model prediction tends to be correct after adding the triggers.
 </div>
 
 
