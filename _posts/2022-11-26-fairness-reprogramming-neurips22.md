@@ -16,7 +16,7 @@ tags: "TrustworthyML"
 categories: "neurips22"
 ---
 
-#### Fairness Reprogramming: Overview
+#### Overview
 
 In this paper, we propose a new generic fairness learning paradigm,
 called fairness reprogramming: 
@@ -42,6 +42,17 @@ If so, why and how would it work?
 
 ---
 
+#### Fairness Reprogramming
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/posts/fairness_nips22/algorithm.png" title="Algorithm." class="img-fluid rounded z-depth-1" zoomable=true%}
+    </div>
+</div>
+<div class="caption" style="color: #999; font-size:16px; padding: 2px;">
+    Figure 2. An illustration of our proposed fairness reprogramming algorithm.
+</div>
+
 #### Experiment results
 
 <div class="row">
@@ -50,7 +61,7 @@ If so, why and how would it work?
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure x. Results on (a) Civil Comments and (b) CelebA. We report the negative DP (left) and the negative EO (right) scores. For each method, we vary the trade-off parameter λ to record the performance. The closer a dot to the upper-right corner, the better the model is. 
+    Figure 3. Results on (a) Civil Comments and (b) CelebA. We report the negative DP (left) and the negative EO (right) scores. For each method, we vary the trade-off parameter λ to record the performance. The closer a dot to the upper-right corner, the better the model is. 
 </div>
 
 
@@ -60,7 +71,7 @@ If so, why and how would it work?
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure x. Results on (a) Civil Comments and (b) CelebA with different tuning data ratio. We report the negative DP (left) and negative EO (right) scores. We consider a fixed BASE model trained with training set, whose negative bias scores are presented as a black dashed line. Then we train other methods with different tuning data ratio to promote fairness of the BASE model.
+    Figure 4. Results on (a) Civil Comments and (b) CelebA with different tuning data ratio. We report the negative DP (left) and negative EO (right) scores. We consider a fixed BASE model trained with training set, whose negative bias scores are presented as a black dashed line. Then we train other methods with different tuning data ratio to promote fairness of the BASE model.
 </div>
 
 
@@ -70,7 +81,7 @@ If so, why and how would it work?
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure x. Results in the transfer setting. We report negative DP (left) and negative EO (right) scores. The triggers are firstly trained in a BASE model. Then, we evaluate the triggers based on another unseen BASE model. We change the parameter λ to trade-off accuracy with fairness and draw the curves in the same way with Fig. y.
+    Figure 5. Results in the transfer setting. We report negative DP (left) and negative EO (right) scores. The triggers are firstly trained in a BASE model. Then, we evaluate the triggers based on another unseen BASE model. We change the parameter λ to trade-off accuracy with fairness and draw the curves in the same way with Fig. y.
 </div>
 
 <div class="row">
@@ -79,7 +90,7 @@ If so, why and how would it work?
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure x. Performance of multi-class classification. For (a) and (b), we use the attributes Blond Hair, Smiling, Attractive for multi-class construction. We add an addition attribute Wavy Hair for (c) and (d).
+    Figure 6. Performance of multi-class classification. For (a) and (b), we use the attributes Blond Hair, Smiling, Attractive for multi-class construction. We add an addition attribute Wavy Hair for (c) and (d).
 </div>
 
 ---
@@ -92,7 +103,7 @@ If so, why and how would it work?
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure x. Illustration of why fairness trigger works. (a) The data generation process. (b) The information flow from data to the classifier through the sufficient statistics. (c) Fairness trigger strongly indicative of a demographic group can confuse the classifier with a false demographic posterior, and thus preventing the classifier from using the correct demographic information.
+    Figure 7. Illustration of why fairness trigger works. (a) The data generation process. (b) The information flow from data to the classifier through the sufficient statistics. (c) Fairness trigger strongly indicative of a demographic group can confuse the classifier with a false demographic posterior, and thus preventing the classifier from using the correct demographic information.
 </div>
 
 ##### Input Saliency Analysis
@@ -103,7 +114,7 @@ If so, why and how would it work?
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure x. Gradient-based saliency map visualized with GRAD CAM of different methods. The highlighted zones (marked in red) depicting regions exerting major influence on the predicted labels (non-blond hair v.s. blond hair) in each row, which also depict the attention of the model on the input image.
+    Figure 8. Gradient-based saliency map visualized with GRAD CAM of different methods. The highlighted zones (marked in red) depicting regions exerting major influence on the predicted labels (non-blond hair v.s. blond hair) in each row, which also depict the attention of the model on the input image.
 </div>
 
 
@@ -113,7 +124,7 @@ If so, why and how would it work?
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure x. A text example from Civil Comments with Integrated Gradient highlighting important words that influence ERM model predictions. The text is concatenated with three triggers generated with different adversary weight. Green highlights the words that lean to toxic predictions and red highlights non-toxic leaning words. The model prediction tends to be correct after adding the triggers.
+    Figure 9. A text example from Civil Comments with Integrated Gradient highlighting important words that influence ERM model predictions. The text is concatenated with three triggers generated with different adversary weight. Green highlights the words that lean to toxic predictions and red highlights non-toxic leaning words. The model prediction tends to be correct after adding the triggers.
 </div>
 
 
@@ -123,7 +134,7 @@ If so, why and how would it work?
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
-    Figure x. Predictions of the demographic classifier on a null input with triggers generated by different λ. The demographic prediction for CV triggers indicate the predicted score for Male and Female, and it is Christian, Muslim and Other religion for NLP.
+    Figure 10. Predictions of the demographic classifier on a null input with triggers generated by different λ. The demographic prediction for CV triggers indicate the predicted score for Male and Female, and it is Christian, Muslim and Other religion for NLP.
 </div>
 
 
