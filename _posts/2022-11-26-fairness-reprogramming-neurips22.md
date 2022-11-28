@@ -81,13 +81,13 @@ $$
 \min_{\boldsymbol\theta, \boldsymbol\delta} \,\,\, \mathcal{L}_{\text{util}} (\mathcal{D}_{\text{tune}}, f^* \circ m) + \lambda \mathcal{L}_{\text{fair}} (\mathcal{D}_{\text{tune}}, f^* \circ m),
 $$
 
-where \\(\mathcal{D}_{\text{tune}}\\) represents the dataset that are used to train the fairness trigger. The first loss term, \\(\mathcal{L}_{\text{util}}\\), is the utility loss function of the task. For classification tasks, \\(\mathcal{L}_{\text{util}}\\) is usually the cross-entropy loss, _i.e._,:
+where $$\mathcal{D}_{\text{tune}}$$ represents the dataset that are used to train the fairness trigger. The first loss term, $$\mathcal{L}_{\text{util}}$$, is the utility loss function of the task. For classification tasks, $$\mathcal{L}_{\text{util}}$$ is usually the cross-entropy loss, _i.e._,:
 
 $$
 \mathcal{L}_{\text{util}}(\mathcal{D}_{\text{tune}}, f^* \circ m) = \mathbb{E}_{\mathbf{X}, Y \sim \mathcal{D}_{\text{tune}}} [\textrm{CE}(Y, f^*(m(\mathbf{X})))],
 $$
 
-The second loss term, \\(\mathcal{L}_{fair}\\), encourages the prediction to follow the fairness criteria and should measure how much information about \\(Z\\) is in \\(\hat{Y}\\). Thus, we introduce another network, the discriminator, \\(d(\cdot; \boldsymbol \phi)\\), where \\(\boldsymbol \phi\\) represents its parameters. If the equalized odds criterion is applied,  then \\(d(\cdot; \boldsymbol \phi)\\) should predict \\(Z\\) from \\(\hat{Y}\\) and \\(Y\\); if the demographic parity criterion is applied, then the input to \\(d(\cdot; \boldsymbol \phi)\\) would just be \\(\hat{Y}\\). The information of \\(Z\\) can be measured by maximizing the _negative_ cross-entropy loss for the prediction of \\(Z\\) over the discriminator parameters:
+The second loss term, $$\mathcal{L}_{fair}$$, encourages the prediction to follow the fairness criteria and should measure how much information about $$Z$$ is in $$\hat{Y}$$. Thus, we introduce another network, the discriminator, $$d(\cdot; \boldsymbol \phi)$$, where $$\boldsymbol \phi$$ represents its parameters. If the equalized odds criterion is applied,  then $$d(\cdot; \boldsymbol \phi)$$ should predict $$Z$$ from $$\hat{Y}$$ and $$Y$$; if the demographic parity criterion is applied, then the input to $$d(\cdot; \boldsymbol \phi)$$ would just be $$\hat{Y}$$. The information of $$Z$$ can be measured by maximizing the _negative_ cross-entropy loss for the prediction of $$Z$$ over the discriminator parameters:
 
 $$
 \mathcal{L}_{\text{fair}} (\mathcal{D}_{\text{tune}}, f^* \circ m) = \max_{\boldsymbol \phi} \mathbb{E}_{\mathbf{X}, Y, Z \sim \mathcal{D}_{\text{tune}}} [-\textrm{CE}(Z, d(f^*(m(\mathbf{X})), Y; \boldsymbol \phi))].
