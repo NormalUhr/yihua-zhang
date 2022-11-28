@@ -45,7 +45,7 @@ If so, why and how would it work?
 #### Fairness Reprogramming
 
 Consider a classification task, where \\(\mathbf{X}\\) represents the input feature and \\(Y\\) represents the output label. There exists some sensitive attributes or demographic group, \\(Z\\), that may be spuriously
-correlated with \\(Y\\). There is a pre-trained classifier, \\(f^*(\cdot)\\) that predicts \\(Y\\) from \\(\mathbf{X}\\), __i.e.__, \\(\hat{Y} = f^*\(\mathbf{X}\)\\).
+correlated with \\(Y\\). There is a pre-trained classifier, $f^*(\cdot)$ that predicts \\(Y\\) from \\(\mathbf{X}\\), __i.e.__, $$\hat{Y} = f^*(\mathbf{X})$$.
 
 The goal of fairness reprogramming is to improve the fairness of the classifier by modifying the input \\(\mathbf{X}\\), while keeping the classifier's weights \\(\boldsymbol\theta\\) fixed. In particular, we aim to achieve either of the following fairness criteria.
 
@@ -81,9 +81,7 @@ $$
 \min_{\boldsymbol\theta, \boldsymbol\delta} \,\,\, \mathcal{L}_{\text{util}} (\mathcal{D}_{\text{tune}}, f^* \circ m) + \lambda \mathcal{L}_{\text{fair}} (\mathcal{D}_{\text{tune}}, f^* \circ m),
 $$
 
-where \\(\mathcal{D}_{\text{tune}}\\) represents the dataset that are used to train the fairness trigger.
-
-The first loss term, \\(\mathcal{L}_{\text{util}}\\), is the utility loss function of the task. For classification tasks, \\(\mathcal{L}_{\text{util}}\\) is usually the cross-entropy loss, _i.e._,:
+where \\(\mathcal{D}_{\text{tune}}\\) represents the dataset that are used to train the fairness trigger. The first loss term, \\(\mathcal{L}_{\text{util}}\\), is the utility loss function of the task. For classification tasks, \\(\mathcal{L}_{\text{util}}\\) is usually the cross-entropy loss, _i.e._,:
 
 $$
 \mathcal{L}_{\text{util}}(\mathcal{D}_{\text{tune}}, f^* \circ m) = \mathbb{E}_{\mathbf{X}, Y \sim \mathcal{D}_{\text{tune}}} [\textrm{CE}(Y, f^*(m(\mathbf{X})))],
