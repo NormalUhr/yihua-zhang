@@ -44,10 +44,10 @@ If so, why and how would it work?
 
 #### Fairness Reprogramming
 
-Consider a classification task, where \\(\mathbf{X}\\) represents the input feature and \\(Y\\) represents the output label. There exists some sensitive attributes or demographic group, \\(Z\\), that may be spuriously
-correlated with \\(Y\\). There is a pre-trained classifier, $f^*(\cdot)$ that predicts \\(Y\\) from \\(\mathbf{X}\\), __i.e.__, $$\hat{Y} = f^*(\mathbf{X})$$.
+Consider a classification task, where $$\mathbf{X}$$ represents the input feature and $$Y$$ represents the output label. There exists some sensitive attributes or demographic group, $$Z$$, that may be spuriously
+correlated with $$Y$$. There is a pre-trained classifier, $$f^*(\cdot)$$ that predicts $$Y$$ from $$\mathbf{X}$$, _i.e._, $$\hat{Y} = f^*(\mathbf{X})$$.
 
-The goal of fairness reprogramming is to improve the fairness of the classifier by modifying the input \\(\mathbf{X}\\), while keeping the classifier's weights \\(\boldsymbol\theta\\) fixed. In particular, we aim to achieve either of the following fairness criteria.
+The goal of fairness reprogramming is to improve the fairness of the classifier by modifying the input $$\mathbf{X}$$, while keeping the classifier's weights $$\boldsymbol\theta$$ fixed. In particular, we aim to achieve either of the following fairness criteria.
 
 * Equalized Odds:
 
@@ -61,7 +61,7 @@ $$
 \hat{Y} \perp Z,
 $$
 
-where \\(\perp\\) denotes independence.
+where $$\perp$$ denotes independence.
 
 ##### Fairness Trigger
 
@@ -71,7 +71,7 @@ $$
 \tilde{\mathbf{X}} = m(\mathbf{X}; \boldsymbol\theta, \boldsymbol \delta) = [\boldsymbol \delta, g(\mathbf{X}; \boldsymbol\theta)],
 $$
 
-where \\(\tilde{\mathbf{X}}\\) denotes the modified input; \\([\cdot]\\) denotes vector concatenation (see Figure 1).
+where $$\tilde{\mathbf{X}}$$ denotes the modified input; $$[\cdot]$$ denotes vector concatenation (see Figure 1).
 
 ##### Optimization Objective and Discriminator
 
