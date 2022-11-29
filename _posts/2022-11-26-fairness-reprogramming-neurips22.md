@@ -16,7 +16,7 @@ tags: "TrustworthyML"
 categories: "neurips22"
 ---
 
-#### Overview
+### Overview
 
 In this paper, we propose a new generic fairness learning paradigm,
 called fairness reprogramming: 
@@ -32,18 +32,18 @@ called fairness reprogramming:
 
 ---
 
-#### Principal Research Question
+### Principal Research Question
 
 <center>
 <b>
-Can an unfair model be reprogrammed into a fair one? If so, why and how would it work?
+Can an unfair model be reprogrammed into a fair one? <br> If so, why and how would it work?
 </b>
 <br>
 </center>
 
 ---
 
-#### Fairness Reprogramming
+### Fairness Reprogramming
 
 Consider a classification task, where $$\mathbf{X}$$ represents the input feature and $$Y$$ represents the output label. There exists some sensitive attributes or demographic groups, $$Z$$, that may be spuriously
 correlated with $$Y$$. There is a pre-trained classifier, $$f^*(\cdot)$$ that predicts $$Y$$ from $$\mathbf{X}$$, _i.e._, $$\hat{Y} = f^*(\mathbf{X})$$.
@@ -64,7 +64,7 @@ $$
 
 where $$\perp$$ denotes independence.
 
-##### Fairness Trigger
+#### Fairness Trigger
 
 The reprogramming primarily involves appending a fairness trigger to the input. Formally, the input modification takes the following generic form:
 
@@ -74,7 +74,7 @@ $$
 
 where $$\tilde{\mathbf{X}}$$ denotes the modified input; $$[\cdot]$$ denotes vector concatenation (see Figure 1).
 
-##### Optimization Objective and Discriminator
+#### Optimization Objective and Discriminator
 
 Our optimization objective is as follows
 
@@ -107,7 +107,7 @@ We give an illustration of our fairness reprogramming algorithm below, which co-
     Figure 2. An illustration of our proposed fairness reprogramming algorithm.
 </div>
 
-#### Experiment results
+### Experiment results
 
 We consider the following two commonly used NLP and CV datasets:
 
@@ -157,7 +157,7 @@ attribute annotations. We adopt the hair color prediction task in our experiment
 
 ---
 
-#### Why does Fairness Trigger work?
+### Why does Fairness Trigger work?
 
 In our paper, we both theoretically prove and empirically demonstrate why a *global trigger* can obscure the demographic information for *any* input. In general, the trigger learned by the reprogrammer contains very strong demographic information and blocks the model from relying on the real demographic information from the input. Since the same trigger is attached to all the input, the uniform demographic information contained in the trigger will weaken the dependence of the model on the true demographic information contained in the data, and thus improve the fairness of the pretrained model.
 
@@ -170,7 +170,7 @@ In our paper, we both theoretically prove and empirically demonstrate why a *glo
     Figure 7. Illustration of why fairness trigger works. (a) The data generation process. (b) The information flow from data to the classifier through sufficient statistics. (c) A fairness trigger strongly indicative of a demographic group can confuse the classifier with a false demographic posterior, thus preventing the classifier from using the correct demographic information.
 </div>
 
-##### Input Saliency Analysis
+#### Input Saliency Analysis
 
 The following two figures compare the saliency maps of some example inputs with and without the fairness triggers. Specifically, For the NLP applications, we extract a subset of Civil
 Comments with religion-related demographic annotations, and apply IG to localize word pieces
@@ -216,7 +216,7 @@ To further verify that the triggers encode demographic information, we trained a
 
 ---
 
-#### Citation
+### Citation
 
 ```
 @inproceedings{zhang2022fairness,
@@ -228,7 +228,7 @@ To further verify that the triggers encode demographic information, we trained a
 ```
 ---
 
-#### Reference 
+### Reference 
 
 <div id="refer-anchor-1"></div> [1] Ramprasaath R Selvaraju et al. “Grad-cam: Visual explanations from deep networks via gradient-based localization” ICCV 2017.
 
