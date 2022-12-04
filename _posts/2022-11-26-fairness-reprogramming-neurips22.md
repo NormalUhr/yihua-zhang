@@ -206,7 +206,7 @@ To further verify that the triggers encode demographic information, we trained a
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/posts/fairness_nips22/why_works.png" title="Trigger demographic information." class="img-fluid rounded z-depth-1" zoomable=true%}
+        {% include figure.html path="assets/img/posts/fairness_nips22/demographic_info_trigger.png" title="Trigger demographic information." class="img-fluid rounded z-depth-1" zoomable=true%}
     </div>
 </div>
 <div class="caption" style="color: #999; font-size:16px; padding: 2px;">
