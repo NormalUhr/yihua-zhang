@@ -18,7 +18,7 @@ nav_order: 6
         {% include figure.html path="assets/photos/NeurIPS22/1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/photos/NeurIPS22/1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/photos/NeurIPS22/2.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
   </div>
 
