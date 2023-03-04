@@ -67,13 +67,13 @@ Model sparsity has seen a lot of research interests these years, as reducing mod
 
 <div id="refer-anchor-5"></div> [5]G. Zhang\*, <b>Y. Zhang</b>\*, Z. Zhang, W. Fan, Q. Li, S. Liu, S. Chang, “Fairness Reprogramming” (NeurIPS'22)
 
-<div id="refer-anchor-6"></div> [6 B. Hou, J. Jia, <b>Y. Zhang</b>, G. Zhang, Y. Zhang, S. Liu, S. Chang, "TextGrad: Advancing Robustness Evaluation in NLP by Gradient-Driven Optimization" (under review)
+<div id="refer-anchor-6"></div> [6 B. Hou, J. Jia, <b>Y. Zhang</b>, G. Zhang, Y. Zhang, S. Liu, S. Chang, "TextGrad: Advancing Robustness Evaluation in NLP by Gradient-Driven Optimization" (ICLR'23)
 
 <div id="refer-anchor-7"></div> [7] H. Li, S. Zhang, M. Wang, <b>Y. Zhang</b>, P. Chen, S. Liu, "Theoretical Characterization of Neural Network Generalization with Group Imbalance" (under review)
 
 <div id="refer-anchor-8"></div> [8] P. Khanduri, I. Tsaknakis, <b>Y. Zhang</b>, J. Liu, S. Liu, J. Zhang, M. Hong, "Linearly Constrained Bilevel Optimization: A Smoothed Implicit Gradient Approach" (under review)
 
-<div id="refer-anchor-9"></div> [9] <b>Y. Zhang</b>, P. Sharma, P. Ram, M. Hong, K. R. Varshney, S. Liu, "What Is Missing in IRM Training and Evaluation? Challenges and Solutions " (under review)
+<div id="refer-anchor-9"></div> [9] <b>Y. Zhang</b>, P. Sharma, P. Ram, M. Hong, K. R. Varshney, S. Liu, "What Is Missing in IRM Training and Evaluation? Challenges and Solutions " (ICLR'23)
 
 
 
