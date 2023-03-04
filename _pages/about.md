@@ -11,8 +11,8 @@ profile:
   address: >
     <p>Room 3210 </p>
     <p>428 S Shaw LN</p>
-    <p>East Lansing, Michigan, USA</p>
-    <p>             </p>
+    <p>East Lansing, Michigan</p>
+    <p>United States of America</p>
     <p>             </p>
     <p>             </p>
 
