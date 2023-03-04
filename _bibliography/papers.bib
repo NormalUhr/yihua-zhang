@@ -1,6 +1,33 @@
 ---
 ---
 
+@inproceedings{hou2022textgrad,
+  abbr={ICLR'23},
+  selected={false},
+  bibtex_show={true},
+  title={TextGrad: Advancing Robustness Evaluation in NLP by Gradient-Driven Optimization},
+  html={https://arxiv.org/abs/2212.09254},
+  code= {https://github.com/UCSB-NLP-Chang/TextGrad},
+  author={Hou, Bairu and Jia*, Jinghan and Zhang*, Yihua and Zhang*, Guanhua and Zhang, Yang and Liu, Sijia and Chang, Shiyu},
+  booktitle={Eleventh International Conference on Learning Representations},
+  year={2023},
+  abstract={Robustness evaluation against adversarial examples has become increasingly important to unveil the trustworthiness of the prevailing deep models in natural language processing (NLP). However, in contrast to the computer vision domain where the first-order projected gradient descent (PGD) is used as the benchmark approach to generate adversarial examples for robustness evaluation, there lacks a principled first-order gradient-based robustness evaluation framework in NLP. The emerging optimization challenges lie in 1) the discrete nature of textual inputs together with the strong coupling between the perturbation location and the actual content, and 2) the additional constraint that the perturbed text should be fluent and achieve a low perplexity under a language model. These challenges make the development of PGD-like NLP attacks difficult. To bridge the gap, we propose TextGrad, a new attack generator using gradient-driven optimization, supporting high-accuracy and high-quality assessment of adversarial robustness in NLP. Specifically, we address the aforementioned challenges in a unified optimization framework. And we develop an effective convex relaxation method to co-optimize the continuously-relaxed site selection and perturbation variables and leverage an effective sampling method to establish an accurate mapping from the continuous optimization variables to the discrete textual perturbations. Moreover, as a first-order attack generation method, TextGrad can be baked into adversarial training to further improve the robustness of NLP models. Extensive experiments are provided to demonstrate the effectiveness of TextGrad not only in attack generation for robustness evaluation but also in adversarial defense.}
+}
+
+@inproceedings{zhang2023what,
+  abbr={ICLR'23},
+  selected={true},
+  bibtex_show={true},
+  title={What Is Missing in IRM Training and Evaluation? Challenges and Solutions},
+  preview={bloc_irm.png},
+  html={https://openreview.net/forum?id=MjsDeTcDEy&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2023%2FConference%2FAuthors%23your-submissions)},
+  code= {https://github.com/OPTML-Group/BLOC-IRM},
+  author={Zhang, Yihua and Sharma, Pranay and Ram, Parikshit and Hong, Mingyi and Varshney, Kush and Liu, Sijia},
+  booktitle={Eleventh International Conference on Learning Representations},
+  year={2023},
+  abstract={Invariant risk minimization (IRM) has received increasing attention as a way to acquire environment-agnostic data representations and predictions, and as a principled solution for preventing spurious correlations from being learned and for improving models' out-of-distribution generalization. Yet, recent works have found that the optimality of the originally-proposed IRM optimization (IRM) may be compromised in practice or could be impossible to achieve in some scenarios. Therefore, a series of advanced IRM algorithms have been developed that show practical improvement over IRM. In this work, we revisit these recent IRM advancements, and identify and resolve three practical limitations in IRM training and evaluation. First, we find that the effect of batch size during training has been chronically overlooked in previous studies, leaving room for further improvement. We propose small-batch training and highlight the improvements over a set of large-batch optimization techniques. Second, we find that improper selection of evaluation environments could give a false sense of invariance for IRM. To alleviate this effect, we leverage diversified test-time environments to precisely characterize the invariance of IRM when applied in practice. Third, we revisit (Ahuja et al. (2020))'s proposal to convert IRM into an ensemble game and identify a limitation when a single invariant predictor is desired instead of an ensemble of individual predictors. We propose a new IRM variant to address this limitation based on a novel viewpoint of ensemble IRM games as consensus-constrained bi-level optimization. Lastly, we conduct extensive experiments (covering 7 existing IRM variants and 7 datasets) to justify the practical significance of revisiting IRM training and evaluation in a principled manner.}
+}
+
 @inproceedings{zhang2022advancing,
   abbr={NeurIPS'22},
   selected={true},
