@@ -2,7 +2,7 @@
 layout: page
 title: Photos
 permalink: /photos/
-description: You do not see my works. You see my life.
+description:
 nav: true
 nav_order: 6
 ---
