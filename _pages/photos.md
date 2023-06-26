@@ -9,6 +9,21 @@ nav_order: 6
 
 <div class="projects">
 
+  <h2 class="category">AAAI 2023</h2>
+
+  <center>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/AAAI23/tutorial.MP4" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <!-- <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/NeurIPS22/2.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div> -->
+  </div>
+
+  </center>
+
   <h2 class="category">NeurIPS 2022</h2>
 
   <center>
