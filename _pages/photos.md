@@ -24,6 +24,15 @@ nav_order: 6
 
   <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/AAAI23/meetup.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/AAAI23/sad.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/photos/AAAI23/view1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
