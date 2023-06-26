@@ -1,6 +1,19 @@
 ---
 ---
 
+@InProceedings{zhang2022revisiting,
+  abbr={ICML'23},
+  selected={false},
+  bibtex_show={true},
+  html={https://openreview.net/pdf?id=VwxjC1tm5o},
+  title =    {Linearly Constrained Bilevel Optimization: A Smoothed Implicit Gradient Approach},
+  author =       {Khanduri, Prashant and Tsaknakis, Ioannis and Zhang, Yihua and Liu, Jia and Liu, Sijia and Zhang, Jiawei and Hong, Mingyi},
+  booktitle =    {Proceedings of the 40th International Conference on Machine Learning},
+  year =   {2023},
+  publisher =    {PMLR},
+  abstract =   {This work develops analysis and algorithms for solving a class of bilevel optimization problems where the lower-level (LL) problems have linear constraints. Most of the existing approaches for constrained bilevel problems rely on value function-based approximate reformulations, which suffer from issues such as non-convex and non-differentiable constraints. In contrast, in this work, we develop an implicit gradient-based approach, which is easy to implement, and is suitable for machine learning applications. We first provide an in-depth understanding of the problem, by showing that the implicit objective for such problems is in general non-differentiable. However, if we add some small (linear) perturbation to the LL objective, the resulting implicit objective becomes differentiable almost surely. This key observation opens the door for developing (deterministic and stochastic) gradient-based algorithms similar to the state-of-the-art ones for unconstrained bi-level problems. We show that when the implicit function is assumed to be strongly-convex, convex, and weakly-convex, the resulting algorithms converge with guaranteed rate. Finally, we experimentally corroborate the theoretical findings and evaluate the performance of the proposed framework on numerical and adversarial learning problems.}
+}
+
 @inproceedings{chen2022understanding,
   abbr={CVPR'23},
   selected={false},
