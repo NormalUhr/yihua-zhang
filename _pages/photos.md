@@ -9,6 +9,72 @@ nav_order: 6
 
 <div class="projects">
 
+  <h2 class="category">Sprint Semester 2023</h2>
+
+  <center>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/CVPR23/group.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/CVPR23/certificate.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/CVPR23/paper1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/CVPR23/paper2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  </center>
+
+  <h2 class="category">Sprint Semester 2023</h2>
+
+  <center>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/Spring2023/dinner_hong.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/Spring2023/reunion.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/Spring2023/yellow_stone_chen.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/Spring2023/yellow_stone_zhang.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/Spring2023/msu_deer.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/Spring2023/msu_squirrel.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/Spring2023/neurips.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/Spring2023/snow.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  </center>
+
   <h2 class="category">AAAI 2023</h2>
 
   <center>
