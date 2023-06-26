@@ -1,7 +1,7 @@
 ---
 ---
 
-@InProceedings{zhang2022revisiting,
+@InProceedings{khanduri2023linearly,
   abbr={ICML'23},
   selected={false},
   bibtex_show={true},
@@ -12,6 +12,20 @@
   year =   {2023},
   publisher =    {PMLR},
   abstract =   {This work develops analysis and algorithms for solving a class of bilevel optimization problems where the lower-level (LL) problems have linear constraints. Most of the existing approaches for constrained bilevel problems rely on value function-based approximate reformulations, which suffer from issues such as non-convex and non-differentiable constraints. In contrast, in this work, we develop an implicit gradient-based approach, which is easy to implement, and is suitable for machine learning applications. We first provide an in-depth understanding of the problem, by showing that the implicit objective for such problems is in general non-differentiable. However, if we add some small (linear) perturbation to the LL objective, the resulting implicit objective becomes differentiable almost surely. This key observation opens the door for developing (deterministic and stochastic) gradient-based algorithms similar to the state-of-the-art ones for unconstrained bi-level problems. We show that when the implicit function is assumed to be strongly-convex, convex, and weakly-convex, the resulting algorithms converge with guaranteed rate. Finally, we experimentally corroborate the theoretical findings and evaluate the performance of the proposed framework on numerical and adversarial learning problems.}
+}
+
+@InProceedings{zhuang2023pilot,
+  abbr={CVPRW'23},
+  selected={false},
+  bibtex_show={true},
+  html={https://openreview.net/pdf?id=VwxjC1tm5o},
+  title =    {A Pilot Study of Query-Free Adversarial Attack against Stable Diffusion},
+  author =       {Zhuang, Haomin and Zhang, Yihua and Liu, Sijia},
+  booktitle =    {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+  month     = {June},
+  year      = {2023},
+  pages     = {2384-2391},
+  abstract =   {Despite the record-breaking performance in Text-to-Image (T2I) generation by Stable Diffusion, less research attention is paid to its adversarial robustness. In this work, we study the problem of adversarial attack generation for Stable Diffusion and ask if an adversarial text prompt can be obtained even in the absence of end-to-end model queries. We call the resulting problem'query-free attack generation'. To resolve this problem, we show that the vulnerability of T2I models is rooted in the lack of robustness of text encoders, eg, the CLIP text encoder used for attacking Stable Diffusion. Based on such insight, we propose both untargeted and targeted query-free attacks, where the former is built on the most influential dimensions in the text embedding space, which we call steerable key dimensions. By leveraging the proposed attacks, we empirically show that only a five-character perturbation to the text prompt is able to cause the significant content shift of synthesized images using Stable Diffusion. Moreover, we show that the proposed target attack can precisely steer the diffusion model to scrub the targeted image content without causing much change in untargeted image content.}
 }
 
 @inproceedings{chen2022understanding,
