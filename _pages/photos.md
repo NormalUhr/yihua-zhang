@@ -9,7 +9,7 @@ nav_order: 6
 
 <div class="projects">
 
-  <h2 class="category">Sprint Semester 2023</h2>
+  <h2 class="category">CVPR 2023</h2>
 
   <center>
 
@@ -33,7 +33,7 @@ nav_order: 6
 
   </center>
 
-  <h2 class="category">Sprint Semester 2023</h2>
+  <h2 class="category">Spring Semester 2023</h2>
 
   <center>
 
