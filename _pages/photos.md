@@ -241,7 +241,7 @@ nav_order: 6
   </center>
 
   <div class="caption">
-    When I was an undergraduate student, I wrote an algorithm with C++ and OpenCV that converts real-life images to ones only made of "string threads". It did not work everytime, but this was the most successful example from the photo of my pal Ziqi Gao (HKUST).
+    When I was an undergraduate, I wrote a CV algorithm with C++ and OpenCV that converts images to "string threads". It did not work everytime, but this was the most successful one from the photo of my pal <a href='https://gaoziqi.org/'>Ziqi Gao </a> (HKUST).
   </div>
 
   <h2 class="category">Life at RWTH</h2>
