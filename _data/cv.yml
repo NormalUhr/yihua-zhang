@@ -37,16 +37,19 @@
 - title: Internship Experience
   type: time_table
   contents:
+    - title: Applied Scientist Internship
+      institution: Amazon AWS
+      year: 2023
     - title: Research Internship
       institution: JD AI Research
       year: 2021
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/NormalUhr/Fast_BAT">Fast-BAT</a>
-      year: 2021
-      description: A fast bi-level optimization-based adversarial training framework.
+# - title: Open Source Projects
+#   type: time_table
+#   contents:
+#     - title: <a href="https://github.com/NormalUhr/Fast_BAT">Fast-BAT</a>
+#       year: 2021
+#       description: A fast bi-level optimization-based adversarial training framework.
 
 - title: Honors and Awards
   type: time_table
@@ -64,7 +67,7 @@
 - title: Professional Services
   type: list
   contents:
-    - <u>Conference Reviewer:</u> CVPR'22, ICLR'22, ICML'22, NeurIPS'22
+    - <u>Conference Reviewer:</u> CVPR (2022~2023), ICLR (2022~2023), ICML (2023), NeurIPS (2021~2023)
     - <u>Journal Reviewer:</u> TMLR
     - Chair of ICML’22 Workshop AdvML (<a href="https://advml-frontier.github.io/">New Frontiers in Adversarial Machine Learning</a>).
     - TPC of <a href="https://www.yihua-zhang.com/">KDD’22 Workshop 4th Workshop on Adversarial Learning Methods for Machine Learning and Data Mining</a>.
