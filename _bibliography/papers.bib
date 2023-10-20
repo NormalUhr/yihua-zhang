@@ -1,22 +1,56 @@
 ---
 ---
 
-@InProceedings{zhang2023selectivity,
-  abbr={NeurIPS'23},
-  selected={true},
+@InProceedings{zhang2023generate,
+  abbr={preprint},
+  selected={false},
   bibtex_show={true},
-  preview={dp_flm.png},
-  html={./},
-  code={./},
-  title = {Selectivity Drives Productivity: Efficient Dataset Pruning for Enhanced Transfer Learning},
-  author = {Zhang, Yihua and Zhang, Yimeng and Chen, Aochuan and Jia, Jinghan and Liu, Jiancheng, and Liu, Gaowen and Hong, Mingyi and Chang, Shiyu and Liu, Sijia},
-  booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-  year={2023},
-  abstract =   {Massive data is often considered essential for deep learning applications, but it also incurs significant computational and infrastructural costs. Therefore, dataset pruning (DP) has emerged as an effective way to improve data efficiency by identifying and removing redundant training samples without sacrificing performance. In this work, we aim to address the problem of DP for transfer learning, i.e., how to prune a source dataset for improved pretraining efficiency and lossless finetuning accuracy on downstream target tasks. To our best knowledge, the problem of DP for transfer learning remains open, as previous studies have primarily addressed DP and transfer learning as separate problems. By contrast, we establish a unified viewpoint to integrate DP with transfer learning and find that existing DP methods are not suitable for the transfer learning paradigm. We then propose two new DP methods, label mapping and feature mapping, for supervised and self-supervised pretraining settings respectively, by revisiting the DP problem through the lens of source-target domain mapping. Furthermore, we demonstrate the effectiveness of our approach on numerous transfer learning tasks. We show that source data classes can be pruned by up to 40% without sacrificing the downstream performance, resulting in a significant 2~5 times speed-up during the pretraining stage. Besides, our proposal exhibits broad applicability and can improve other computationally intensive transfer learning techniques, such as adversarial pretraining.}
+  preview={mu_attack.png},
+  html={https://arxiv.org/abs/2310.12508},
+  code={https://github.com/OPTML-Group/Unlearn-Saliency},
+  title =    {SalUn: Empowering Machine Unlearning via Gradient-based Weight Saliency in Both Image Classification and Generation},
+  author =       {Chongyu Fan, Jiancheng Liu, Yihua Zhang, Dennis Wei, Eric Wong, Sijia Liu},
+  booktitle = {arxiv 2310.12508},
+  month     = {October},
+  year      = {2023},
+  abstract =   {With evolving data regulations, machine unlearning (MU) has become an important tool for fostering trust and safety in today's AI models. However, existing MU methods focusing on data and/or weight perspectives often grapple with limitations in unlearning accuracy, stability, and cross-domain applicability. To address these challenges, we introduce the concept of 'weight saliency' in MU, drawing parallels with input saliency in model explanation. This innovation directs MU's attention toward specific model weights rather than the entire model, improving effectiveness and efficiency. The resultant method that we call saliency unlearning (SalUn) narrows the performance gap with 'exact' unlearning (model retraining from scratch after removing the forgetting dataset). To the best of our knowledge, SalUn is the first principled MU approach adaptable enough to effectively erase the influence of forgetting data, classes, or concepts in both image classification and generation. For example, SalUn yields a stability advantage in high-variance random data forgetting, e.g., with a 0.2% gap compared to exact unlearning on the CIFAR-10 dataset. Moreover, in preventing conditional diffusion models from generating harmful images, SalUn achieves nearly 100% unlearning accuracy, outperforming current state-of-the-art baselines like Erased Stable Diffusion and Forget-Me-Not.}
 }
 
+
+@InProceedings{zhang2023generate,
+  abbr={preprint},
+  selected={false},
+  bibtex_show={true},
+  preview={mu_attack.png},
+  html={https://arxiv.org/abs/2310.11868},
+  code={https://github.com/OPTML-Group/Diffusion-MU-Attack},
+  title =    {To Generate or Not? Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images ... For Now},
+  author =       {Yimeng Zhang, Jinghan Jia, Xin Chen, Aochuan Chen, Yihua Zhang, Jiancheng Liu, Ke Ding, Sijia Liu},
+  booktitle = {arxiv 2310.11868},
+  month     = {October},
+  year      = {2023},
+  abstract =   {The recent advances in diffusion models (DMs) have revolutionized the generation of complex and diverse images. However, these models also introduce potential safety hazards, such as the production of harmful content and infringement of data copyrights. Although there have been efforts to create safety-driven unlearning methods to counteract these challenges, doubts remain about their capabilities. To bridge this uncertainty, we propose an evaluation framework built upon adversarial attacks (also referred to as adversarial prompts), in order to discern the trustworthiness of these safety-driven unlearned DMs. Specifically, our research explores the (worst-case) robustness of unlearned DMs in eradicating unwanted concepts, styles, and objects, assessed by the generation of adversarial prompts. We develop a novel adversarial learning approach called UnlearnDiff that leverages the inherent classification capabilities of DMs to streamline the generation of adversarial prompts, making it as simple for DMs as it is for image classification attacks. This technique streamlines the creation of adversarial prompts, making the process as intuitive for generative modeling as it is for image classification assaults. Through comprehensive benchmarking, we assess the unlearning robustness of five prevalent unlearned DMs across multiple tasks. Our results underscore the effectiveness and efficiency of UnlearnDiff when compared to state-of-the-art adversarial prompting methods. WARNING: This paper contains model outputs that may be offensive in nature.}
+}
+
+
+@InProceedings{chen2023deepzero,
+  abbr={preprint},
+  selected={false},
+  bibtex_show={true},
+  preview={deep_zero.png},
+  html={https://arxiv.org/abs/2310.02025},
+  code={./},
+  title =    {DeepZero: Scaling up Zeroth-Order Optimization for Deep Model Training},
+  author =       {Aochuan Chen, Yimeng Zhang, Jinghan Jia, James Diffenderfer, Jiancheng Liu, Konstantinos Parasyris, Yihua Zhang, Zheng Zhang, Bhavya Kailkhura, Sijia Liu},
+  booktitle = {arxiv 2310.02025},
+  month     = {October},
+  year      = {2023},
+  abstract =   {Zeroth-order (ZO) optimization has become a popular technique for solving machine learning (ML) problems when first-order (FO) information is difficult or impossible to obtain. However, the scalability of ZO optimization remains an open problem: Its use has primarily been limited to relatively small-scale ML problems, such as sample-wise adversarial attack generation. To our best knowledge, no prior work has demonstrated the effectiveness of ZO optimization in training deep neural networks (DNNs) without a significant decrease in performance. To overcome this roadblock, we develop DeepZero, a principled ZO deep learning (DL) framework that can scale ZO optimization to DNN training from scratch through three primary innovations. First, we demonstrate the advantages of coordinate-wise gradient estimation (CGE) over randomized vector-wise gradient estimation in training accuracy and computational efficiency. Second, we propose a sparsity-induced ZO training protocol that extends the model pruning methodology using only finite differences to explore and exploit the sparse DL prior in CGE. Third, we develop the methods of feature reuse and forward parallelization to advance the practical implementations of ZO training. Our extensive experiments show that DeepZero achieves state-of-the-art (SOTA) accuracy on ResNet-20 trained on CIFAR-10, approaching FO training performance for the first time. Furthermore, we show the practical utility of DeepZero in applications of certified adversarial defense and DL-based partial differential equation error correction, achieving 10-20% improvement over SOTA. We believe our results will inspire future research on scalable ZO optimization and contribute to advancing DL with black box.}
+}
+
+
 @InProceedings{zhang2023introduction,
-  abbr={arxiv},
+  abbr={preprint},
   selected={true},
   bibtex_show={true},
   preview={blo_survey.png},
@@ -28,6 +62,20 @@
   month     = {August},
   year      = {2023},
   abstract =   {Recently, bi-level optimization (BLO) has taken center stage in some very exciting developments in the area of signal processing (SP) and machine learning (ML). Roughly speaking, BLO is a classical optimization problem that involves two levels of hierarchy (i.e., upper and lower levels), wherein obtaining the solution to the upper-level problem requires solving the lower-level one. BLO has become popular largely because it is powerful in modeling problems in SP and ML, among others, that involve optimizing nested objective functions. Prominent applications of BLO range from resource allocation for wireless systems to adversarial machine learning. In this work, we focus on a class of tractable BLO problems that often appear in SP and ML applications. We provide an overview of some basic concepts of this class of BLO problems, such as their optimality conditions, standard algorithms (including their optimization principles and practical implementations), as well as how they can be leveraged to obtain state-of-the-art results for a number of key SP and ML applications. Further, we discuss some recent advances in BLO theory, its implications for applications, and point out some limitations of the state-of-the-art that require significant future research efforts. Overall, we hope that this article can serve to accelerate the adoption of BLO as a generic tool to model, analyze, and innovate on a wide array of emerging SP and ML applications.}
+}
+
+@InProceedings{zhang2023selectivity,
+  abbr={NeurIPS'23},
+  selected={true},
+  bibtex_show={true},
+  preview={dp_flm.png},
+  html={https://arxiv.org/abs/2310.08782},
+  code={https://github.com/OPTML-Group/DP4TL},
+  title = {Selectivity Drives Productivity: Efficient Dataset Pruning for Enhanced Transfer Learning},
+  author = {Zhang, Yihua and Zhang, Yimeng and Chen, Aochuan and Jia, Jinghan and Liu, Jiancheng, and Liu, Gaowen and Hong, Mingyi and Chang, Shiyu and Liu, Sijia},
+  booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+  year={2023},
+  abstract =   {Massive data is often considered essential for deep learning applications, but it also incurs significant computational and infrastructural costs. Therefore, dataset pruning (DP) has emerged as an effective way to improve data efficiency by identifying and removing redundant training samples without sacrificing performance. In this work, we aim to address the problem of DP for transfer learning, i.e., how to prune a source dataset for improved pretraining efficiency and lossless finetuning accuracy on downstream target tasks. To our best knowledge, the problem of DP for transfer learning remains open, as previous studies have primarily addressed DP and transfer learning as separate problems. By contrast, we establish a unified viewpoint to integrate DP with transfer learning and find that existing DP methods are not suitable for the transfer learning paradigm. We then propose two new DP methods, label mapping and feature mapping, for supervised and self-supervised pretraining settings respectively, by revisiting the DP problem through the lens of source-target domain mapping. Furthermore, we demonstrate the effectiveness of our approach on numerous transfer learning tasks. We show that source data classes can be pruned by up to 40% without sacrificing the downstream performance, resulting in a significant 2~5 times speed-up during the pretraining stage. Besides, our proposal exhibits broad applicability and can improve other computationally intensive transfer learning techniques, such as adversarial pretraining.}
 }
 
 @InProceedings{zhang2023robust,
