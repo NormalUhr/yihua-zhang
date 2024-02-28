@@ -1,19 +1,24 @@
 ---
 ---
 
-@InProceedings{fan2023salun,
+
+@InProceedings{zhang2024unlearncanvas,
   abbr={preprint},
-  selected={false},
+  selected={true},
   bibtex_show={true},
-  preview={salun.png},
-  html={https://arxiv.org/abs/2310.12508},
-  code={https://github.com/OPTML-Group/Unlearn-Saliency},
-  title =    {SalUn: Empowering Machine Unlearning via Gradient-based Weight Saliency in Both Image Classification and Generation},
-  author =       {Fan, Chongyu and Liu, Jiancheng and Zhang, Yihua and Wei, Dennis and Wong, Eric and Liu, Sijia},
-  booktitle = {arxiv 2310.12508},
-  month     = {October},
-  year      = {2023},
-  abstract =   {With evolving data regulations, machine unlearning (MU) has become an important tool for fostering trust and safety in today's AI models. However, existing MU methods focusing on data and/or weight perspectives often grapple with limitations in unlearning accuracy, stability, and cross-domain applicability. To address these challenges, we introduce the concept of 'weight saliency' in MU, drawing parallels with input saliency in model explanation. This innovation directs MU's attention toward specific model weights rather than the entire model, improving effectiveness and efficiency. The resultant method that we call saliency unlearning (SalUn) narrows the performance gap with 'exact' unlearning (model retraining from scratch after removing the forgetting dataset). To the best of our knowledge, SalUn is the first principled MU approach adaptable enough to effectively erase the influence of forgetting data, classes, or concepts in both image classification and generation. For example, SalUn yields a stability advantage in high-variance random data forgetting, e.g., with a 0.2% gap compared to exact unlearning on the CIFAR-10 dataset. Moreover, in preventing conditional diffusion models from generating harmful images, SalUn achieves nearly 100% unlearning accuracy, outperforming current state-of-the-art baselines like Erased Stable Diffusion and Forget-Me-Not.}
+  preview={unlearn_canvas.png},
+  html={https://arxiv.org/pdf/2402.11846},
+  video= {https://www.youtube.com/watch?v=lC_R_b9ZiH8},
+  dataset={https://huggingface.co/datasets/OPTML-Group/UnlearnCanvas},
+  benchmark={https://huggingface.co/spaces/OPTML-Group/UnlearnCanvas-Benchmark},
+  website={https://unlearn-canvas.netlify.app/},
+  code={https://github.com/OPTML-Group/UnlearnCanvas},
+  title =    {UnlearnCanvas: A Stylized Image Dataset to Benchmark Machine Unlearning for Diffusion Models},
+  author =       {Zhang, Yihua and Zhang, Yimeng and Yao, Yuguang and Jia, Jinghan and Liu, Jiancheng and Liu, Xiaoming and Liu, Sijia},
+  booktitle = {arXiv preprint arXiv:2402.11846},
+  month     = {Feburary},
+  year      = {2024},
+  abstract =   {The rapid advancement of diffusion models (DMs) has not only transformed various real-world industries but has also introduced negative societal concerns, including the generation of harmful content, copyright disputes, and the rise of stereotypes and biases. To mitigate these issues, machine unlearning (MU) has emerged as a potential solution, demonstrating its ability to remove undesired generative capabilities of DMs in various applications. However, by examining existing MU evaluation methods, we uncover several key challenges that can result in incomplete, inaccurate, or biased evaluations for MU in DMs. To address them, we enhance the evaluation metrics for MU, including the introduction of an often-overlooked retainability measurement for DMs post-unlearning. Additionally, we introduce UnlearnCanvas, a comprehensive high-resolution stylized image dataset that facilitates us to evaluate the unlearning of artistic painting styles in conjunction with associated image objects. We show that this dataset plays a pivotal role in establishing a standardized and automated evaluation framework for MU techniques on DMs, featuring 7 quantitative metrics to address various aspects of unlearning effectiveness. Through extensive experiments, we benchmark 5 state-of-the-art MU methods, revealing novel insights into their pros and cons, and the underlying unlearning mechanisms. Furthermore, we demonstrate the potential of UnlearnCanvas to benchmark other generative modeling tasks, such as style transfer.}
 }
 
 
@@ -32,9 +37,24 @@
   abstract =   {The recent advances in diffusion models (DMs) have revolutionized the generation of complex and diverse images. However, these models also introduce potential safety hazards, such as the production of harmful content and infringement of data copyrights. Although there have been efforts to create safety-driven unlearning methods to counteract these challenges, doubts remain about their capabilities. To bridge this uncertainty, we propose an evaluation framework built upon adversarial attacks (also referred to as adversarial prompts), in order to discern the trustworthiness of these safety-driven unlearned DMs. Specifically, our research explores the (worst-case) robustness of unlearned DMs in eradicating unwanted concepts, styles, and objects, assessed by the generation of adversarial prompts. We develop a novel adversarial learning approach called UnlearnDiff that leverages the inherent classification capabilities of DMs to streamline the generation of adversarial prompts, making it as simple for DMs as it is for image classification attacks. This technique streamlines the creation of adversarial prompts, making the process as intuitive for generative modeling as it is for image classification assaults. Through comprehensive benchmarking, we assess the unlearning robustness of five prevalent unlearned DMs across multiple tasks. Our results underscore the effectiveness and efficiency of UnlearnDiff when compared to state-of-the-art adversarial prompting methods. WARNING: This paper contains model outputs that may be offensive in nature.}
 }
 
+@InProceedings{fan2023salun,
+  abbr={ICLR24},
+  selected={false},
+  bibtex_show={true},
+  preview={salun.png},
+  html={https://arxiv.org/abs/2310.12508},
+  code={https://github.com/OPTML-Group/Unlearn-Saliency},
+  title =    {SalUn: Empowering Machine Unlearning via Gradient-based Weight Saliency in Both Image Classification and Generation},
+  author =       {Fan, Chongyu and Liu, Jiancheng and Zhang, Yihua and Wei, Dennis and Wong, Eric and Liu, Sijia},
+  booktitle = {arxiv 2310.12508},
+  month     = {October},
+  year      = {2023},
+  abstract =   {With evolving data regulations, machine unlearning (MU) has become an important tool for fostering trust and safety in today's AI models. However, existing MU methods focusing on data and/or weight perspectives often grapple with limitations in unlearning accuracy, stability, and cross-domain applicability. To address these challenges, we introduce the concept of 'weight saliency' in MU, drawing parallels with input saliency in model explanation. This innovation directs MU's attention toward specific model weights rather than the entire model, improving effectiveness and efficiency. The resultant method that we call saliency unlearning (SalUn) narrows the performance gap with 'exact' unlearning (model retraining from scratch after removing the forgetting dataset). To the best of our knowledge, SalUn is the first principled MU approach adaptable enough to effectively erase the influence of forgetting data, classes, or concepts in both image classification and generation. For example, SalUn yields a stability advantage in high-variance random data forgetting, e.g., with a 0.2% gap compared to exact unlearning on the CIFAR-10 dataset. Moreover, in preventing conditional diffusion models from generating harmful images, SalUn achieves nearly 100% unlearning accuracy, outperforming current state-of-the-art baselines like Erased Stable Diffusion and Forget-Me-Not.}
+}
+
 
 @InProceedings{chen2023deepzero,
-  abbr={preprint},
+  abbr={ICLR24},
   selected={false},
   bibtex_show={true},
   preview={deep_zero.png},
@@ -50,7 +70,7 @@
 
 
 @InProceedings{zhang2023introduction,
-  abbr={preprint},
+  abbr={IEEE SPM},
   selected={true},
   bibtex_show={true},
   preview={blo_survey.png},
@@ -70,6 +90,7 @@
   bibtex_show={true},
   preview={dp_flm.png},
   html={https://arxiv.org/abs/2310.08782},
+  website={https://pruning.netlify.app},
   code={https://github.com/OPTML-Group/DP4TL},
   title={Selectivity Drives Productivity: Efficient Dataset Pruning for Enhanced Transfer Learning},
   author={Zhang, Yihua and Zhang, Yimeng and Chen, Aochuan and Jia, Jinghan and Liu, Jiancheng, and Liu, Gaowen and Hong, Mingyi and Chang, Shiyu and Liu, Sijia},
