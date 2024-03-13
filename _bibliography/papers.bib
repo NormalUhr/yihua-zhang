@@ -54,7 +54,7 @@
 }
 
 @InProceedings{fan2023salun,
-  abbr={ICLR24},
+  abbr={ICLR’24},
   selected={false},
   bibtex_show={true},
   preview={salun.png},
@@ -70,7 +70,7 @@
 
 
 @InProceedings{chen2023deepzero,
-  abbr={ICLR24},
+  abbr={ICLR‘24},
   selected={false},
   bibtex_show={true},
   preview={deep_zero.png},
@@ -146,6 +146,19 @@
   year =   {2023},
   publisher =    {PMLR},
   abstract =   {This work develops analysis and algorithms for solving a class of bilevel optimization problems where the lower-level (LL) problems have linear constraints. Most of the existing approaches for constrained bilevel problems rely on value function-based approximate reformulations, which suffer from issues such as non-convex and non-differentiable constraints. In contrast, in this work, we develop an implicit gradient-based approach, which is easy to implement, and is suitable for machine learning applications. We first provide an in-depth understanding of the problem, by showing that the implicit objective for such problems is in general non-differentiable. However, if we add some small (linear) perturbation to the LL objective, the resulting implicit objective becomes differentiable almost surely. This key observation opens the door for developing (deterministic and stochastic) gradient-based algorithms similar to the state-of-the-art ones for unconstrained bi-level problems. We show that when the implicit function is assumed to be strongly-convex, convex, and weakly-convex, the resulting algorithms converge with guaranteed rate. Finally, we experimentally corroborate the theoretical findings and evaluate the performance of the proposed framework on numerical and adversarial learning problems.}
+}
+
+@inproceedings{jia2023robustness,
+  abbr={ICASSP},
+  preview={robust_cl.png},
+  title={Robustness-Preserving Lifelong Learning Via Dataset Condensation},
+  author={Jinghan Jia and Yihua Zhang and Dogyoon Song and Sijia Liu and Alfred Hero},
+  booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={1--5},
+  year={2023},
+  organization={IEEE},
+  html={https://arxiv.org/abs/2303.04183},
+  abstract =   {Lifelong learning (LL) aims to improve a predictive model as the data source evolves continuously. Most work in this learning paradigm has focused on resolving the problem of ‘catastrophic forgetting,’ which refers to a notorious dilemma between improving model accuracy over new data and retaining accuracy over previous data. Yet, it is also known that machine learning (ML) models can be vulnerable in the sense that even tiny, adversarial input perturbations can deceive the models into producing erroneous predictions. This motivates the research objective of this paper – specification of a new LL framework that can salvage model robustness (against adversarial attacks) from catastrophic forgetting. Specifically, we propose a new memory-replay LL strategy that leverages modern bi-level optimization techniques to determine the ‘coreset’ of the current data (i.e., a small amount of data to be memorized) for ease of preserving adversarial robustness over time. We term the resulting LL framework ‘Data-Efficient RobustnessPreserving LL’ (DERPLL). The effectiveness of DERPLL is evaluated for class-incremental image classification using ResNet-18 over the CIFAR-10 dataset. Experimental results show that DERPLL outperforms the conventional coresetguided LL baseline and achieves a substantial improvement in both standard accuracy and robust accuracy.}
 }
 
 @InProceedings{zhuang2023pilot,
