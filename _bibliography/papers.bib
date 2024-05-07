@@ -2,22 +2,6 @@
 ---
 
 
-@InProceedings{zhang2024revisiting,
-  abbr={preprint},
-  selected={true},
-  bibtex_show={true},
-  preview={zo_bench.png},
-  html={https://arxiv.org/pdf/2402.11592},
-  code={https://github.com/ZO-Bench/ZO-LLM},
-  title =    {Revisiting Zeroth-Order Optimization for Memory-Efficient LLM Fine-Tuning: A Benchmark },
-  author =       {Yihua Zhang and Pingzhi Li and Junyuan Hong and Jiaxiang Li and Yimeng Zhang and Wenqing Zheng and Pin-Yu Chen and Jason D. Lee and Wotao Yin and Mingyi Hong and Zhangyang Wang and Sijia Liu and Tianlong Chen},
-  booktitle = {arXiv preprint arXiv:2402.11592},
-  month     = {Feburary},
-  year      = {2024},
-  abstract =   {In the evolving landscape of natural language processing (NLP), fine-tuning pre-trained Large Language Models (LLMs) with first-order (FO) optimizers like SGD and Adam has become standard. Yet, as LLMs grow in size, the substantial memory overhead from back-propagation (BP) for FO gradient computation presents a significant challenge. Addressing this issue is crucial, especially for applications like on-device training where memory efficiency is paramount. This paper proposes a shift towards BP-free, zeroth-order (ZO) optimization as a solution for reducing memory costs during LLM fine-tuning, building on the initial concept introduced by Malladi et al. (2023). Unlike traditional ZO-SGD methods, our work expands the exploration to a wider array of ZO optimization techniques, through a comprehensive, firstof-its-kind benchmarking study across five LLM families (Roberta, OPT, LLaMA, Vicuna, Mistral), three task complexities, and five fine-tuning schemes. Our study unveils previously overlooked optimization principles, highlighting the importance of task alignment, the role of the forward gradient method, and the balance between algorithm complexity and fine-tuning performance. We further introduce novel enhancements to ZO optimization, including block-wise descent, hybrid training, and gradient sparsity. Our study offers a promising direction for achieving further memory-efficient LLM fine-tuning. Codes to reproduce all our experiments are at https://github.com/ZO-Bench/ZO-LLM.}
-}
-
-
 @InProceedings{zhang2024unlearncanvas,
   abbr={preprint},
   selected={true},
@@ -52,6 +36,22 @@
   year      = {2023},
   abstract =   {The recent advances in diffusion models (DMs) have revolutionized the generation of complex and diverse images. However, these models also introduce potential safety hazards, such as the production of harmful content and infringement of data copyrights. Although there have been efforts to create safety-driven unlearning methods to counteract these challenges, doubts remain about their capabilities. To bridge this uncertainty, we propose an evaluation framework built upon adversarial attacks (also referred to as adversarial prompts), in order to discern the trustworthiness of these safety-driven unlearned DMs. Specifically, our research explores the (worst-case) robustness of unlearned DMs in eradicating unwanted concepts, styles, and objects, assessed by the generation of adversarial prompts. We develop a novel adversarial learning approach called UnlearnDiff that leverages the inherent classification capabilities of DMs to streamline the generation of adversarial prompts, making it as simple for DMs as it is for image classification attacks. This technique streamlines the creation of adversarial prompts, making the process as intuitive for generative modeling as it is for image classification assaults. Through comprehensive benchmarking, we assess the unlearning robustness of five prevalent unlearned DMs across multiple tasks. Our results underscore the effectiveness and efficiency of UnlearnDiff when compared to state-of-the-art adversarial prompting methods. WARNING: This paper contains model outputs that may be offensive in nature.}
 }
+
+@InProceedings{zhang2024revisiting,
+  abbr={ICML'24},
+  selected={true},
+  bibtex_show={true},
+  preview={zo_bench.png},
+  html={https://arxiv.org/pdf/2402.11592},
+  code={https://github.com/ZO-Bench/ZO-LLM},
+  title =    {Revisiting Zeroth-Order Optimization for Memory-Efficient LLM Fine-Tuning: A Benchmark },
+  author =       {Yihua Zhang and Pingzhi Li and Junyuan Hong and Jiaxiang Li and Yimeng Zhang and Wenqing Zheng and Pin-Yu Chen and Jason D. Lee and Wotao Yin and Mingyi Hong and Zhangyang Wang and Sijia Liu and Tianlong Chen},
+  booktitle = {arXiv preprint arXiv:2402.11592},
+  month     = {Feburary},
+  year      = {2024},
+  abstract =   {In the evolving landscape of natural language processing (NLP), fine-tuning pre-trained Large Language Models (LLMs) with first-order (FO) optimizers like SGD and Adam has become standard. Yet, as LLMs grow in size, the substantial memory overhead from back-propagation (BP) for FO gradient computation presents a significant challenge. Addressing this issue is crucial, especially for applications like on-device training where memory efficiency is paramount. This paper proposes a shift towards BP-free, zeroth-order (ZO) optimization as a solution for reducing memory costs during LLM fine-tuning, building on the initial concept introduced by Malladi et al. (2023). Unlike traditional ZO-SGD methods, our work expands the exploration to a wider array of ZO optimization techniques, through a comprehensive, firstof-its-kind benchmarking study across five LLM families (Roberta, OPT, LLaMA, Vicuna, Mistral), three task complexities, and five fine-tuning schemes. Our study unveils previously overlooked optimization principles, highlighting the importance of task alignment, the role of the forward gradient method, and the balance between algorithm complexity and fine-tuning performance. We further introduce novel enhancements to ZO optimization, including block-wise descent, hybrid training, and gradient sparsity. Our study offers a promising direction for achieving further memory-efficient LLM fine-tuning. Codes to reproduce all our experiments are at https://github.com/ZO-Bench/ZO-LLM.}
+}
+
 
 @InProceedings{fan2023salun,
   abbr={ICLR’24},
@@ -173,6 +173,7 @@
   title =    {A Pilot Study of Query-Free Adversarial Attack against Stable Diffusion},
   author =       {Zhuang, Haomin and Zhang, Yihua and Liu, Sijia},
   booktitle =    {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+  code={https://github.com/OPTML-Group/QF-Attack},
   month     = {June},
   year      = {2023},
   pages     = {2384-2391},
