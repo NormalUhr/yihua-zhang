@@ -17,18 +17,19 @@
       description:
         - title: Trustworthy Machine Learning
           contents:
-              - Robustness
-              - Fairness
-              - Explanability
+              - Model Robustness (Adversarial Robustness, Backdoor Attacks, Out-of-Distribution, etc.)
+              - Model Fairness
+              - Machine Unlearning (Copyright infringement, Harmful Content Removal)
         - title: Scalable Machine Learning
           contents:
-            - Efficient Algorithm
-            - Efficient Model
-            - Efficient Data
-    
-    - title: Master in Automation
-      institution: RWTH Aachen University, Germany
-      year: 2021
+            - Efficient Model (Model Pruning, Mixture-of-Expert, On-Device Training)
+            - Efficient Data (Data Distillation, Coreset Selection)
+        - title: Foundation Algorithm Development
+          contents:
+            - Bi-Level Optimization
+            - Zeroth-Order Optimization
+            - Invariant Risk Minimization
+            - Distribution Machine Learning
 
     - title: B.E. in Automation
       institution: Huazhong University of Science and Technology, China
@@ -37,12 +38,17 @@
 - title: Internship Experience
   type: time_table
   contents:
-    - title: Applied Scientist Internship
+    - title: Research Scientist Intern
+      year: 2024
+      description: Investigate efficient and effective machine unlearning algorithms for foundation models, including Large Language Models (LLMs), Diffusion Models (DMs), and Mixture-of-Experts (MoEs).
+    - title: Applied Scientist Intern
       institution: Amazon AWS
       year: 2023
+      description: Investigate the in-context learning for vision generative models, including its design, training, and generalization ability.
     - title: Research Internship
       institution: JD AI Research
       year: 2021
+      description: Develop algorithms to enhance the robustness and the fairness of the AI algorithms, such as facial recognition, ORC, object detection. Implement and release the new designed algorithms to the JD corperation for intern use or as part of the commercial APIs.
 
 # - title: Open Source Projects
 #   type: time_table
@@ -54,9 +60,21 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2024
+      items:
+        - 2024 MLCommons ML and Systems Rising Stars sponsored by Nvidia
+    - year: 2023
+      items:
+        - AAAI 2023 Travel Award 
+        - NeurIPS Scholar Award
+        - NeurIPS Top Reviewer 
+        - CVPR 2023 Outstanding Reviewer
     - year: 2022
       items: 
         - Best Paper Runner-up Awards, UAI 2022
+        - NeurIPS Scholar Award
+        - NeurIPS Top Reviewer
+        - ICML 2022 Travel Grant Award
     - year: 2017
       items: 
         - National Scholarship
@@ -67,13 +85,14 @@
 - title: Professional Services
   type: list
   contents:
-    - <u>Conference Reviewer:</u> CVPR (2022~2023), ICLR (2022~2023), ICML (2023), NeurIPS (2021~2023)
-    - <u>Journal Reviewer:</u> TMLR
-    - Chair of ICML’22 Workshop AdvML (<a href="https://advml-frontier.github.io/">New Frontiers in Adversarial Machine Learning</a>).
-    - TPC of <a href="https://www.yihua-zhang.com/">KDD’22 Workshop 4th Workshop on Adversarial Learning Methods for Machine Learning and Data Mining</a>.
-    - TPC of <a href="https://neurips2021workshopfl.github.io/NFFL-2021/committee.html">NeurIPS'21 Workshop NFFL New Frontiers in Federated Learning Privacy, Fairness, Robustness, Personalization and Data Ownership</a>.
+    - <u>Conference Reviewer:</u> CVPR, ICLR, ICML, NeurIPS, ICCV/ECCV, AISTATS, UAI
+    - <u>Journal Reviewer:</u> TMLR, T-PAMI, T-IFS, 
+    - Student chair of ICML’22 Workshop AdvML (<a href="https://advml-frontier.github.io/past/icml2022/">New Frontiers in Adversarial Machine Learning</a>).
+    - Student chair of ICML'23 Workshop AdvML (<a href="https://advml-frontier.github.io/">New Frontiers in Adversarial Machine Learning</a>).
 
-- title: Talk
+- title: Tutorials/Talk
   type: list
   contents:
-    - Advancing Algorithmic Foundation of Robust Deep Learning through the Lens of Bi-level Optimization at INFORMS Annual Meeting 2022
+    - "AAAI 2024 Tutorial, Zeroth-Order Machine Learning: Fundamental Principles and Emerging Applications in Foundation Models"
+    - "AAAI 2023 Tutorial, Bi-level Optimization in Machine Learning: Foundations and Applications"
+    - "Talk at INFORMS Annual Meeting 2022, Advancing Algorithmic Foundation of Robust Deep Learning through the Lens of Bi-level Optimization"
