@@ -39,6 +39,7 @@
   type: time_table
   contents:
     - title: Research Scientist Intern
+      institution: Cisco Research
       year: 2024
       description: Investigate efficient and effective machine unlearning algorithms for foundation models, including Large Language Models (LLMs), Diffusion Models (DMs), and Mixture-of-Experts (MoEs).
     - title: Applied Scientist Intern
