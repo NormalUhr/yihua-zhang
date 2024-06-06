@@ -33,22 +33,22 @@
 
     - title: B.E. in Automation
       institution: Huazhong University of Science and Technology, China
-      year: 2019
+      year: 2015-2019
 
 - title: Internship Experience
   type: time_table
   contents:
     - title: Research Scientist Intern
       institution: Cisco Research
-      year: 2024
+      year: 11/2023-08/2024
       description: Investigate efficient and effective machine unlearning algorithms for foundation models, including Large Language Models (LLMs), Diffusion Models (DMs), and Mixture-of-Experts (MoEs).
     - title: Applied Scientist Intern
       institution: Amazon AWS
-      year: 2023
+      year: 05/2023-08/2023
       description: Investigate the in-context learning for vision generative models, including its design, training, and generalization ability.
     - title: Research Internship
       institution: JD AI Research
-      year: 2021
+      year: 01/2021-08/2021
       description: Develop algorithms to enhance the robustness and the fairness of the AI algorithms, such as facial recognition, ORC, object detection. Implement and release the new designed algorithms to the JD corperation for intern use or as part of the commercial APIs.
 
 # - title: Open Source Projects
