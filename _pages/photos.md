@@ -9,7 +9,82 @@ nav_order: 6
 
 <div class="projects">
 
-  <h2 class="category">CVPR 2023</h2>
+  <h2 class="category">ICLR 2024 - Vienna, Austria</h2>
+
+  <center>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/ICLR24/1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/ICLR24/2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/ICLR24/3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/ICLR24/4.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  </center>
+
+  <h2 class="category">CPAL 2024 - Hong Kong, China</h2>
+
+  <center>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/CPAL24/1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/CPAL24/2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  </center>
+
+  <h2 class="category">NeurIPS 2023 - New Orleans, USA</h2>
+
+  <center>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/NeurIPS23/1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/NeurIPS23/2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/NeurIPS23/4.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/NeurIPS23/5.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+   <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/NeurIPS23/6.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/NeurIPS23/7.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+    {% include figure.html path="assets/photos/NeurIPS23/3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+
+  </center>
+
+
+  <h2 class="category">CVPR 2023 - Vancouver, Canada</h2>
 
   <center>
 
@@ -33,7 +108,7 @@ nav_order: 6
 
   </center>
 
-  <h2 class="category">Spring Semester 2023</h2>
+  <h2 class="category">Spring Semester 2023 - East Lansing, USA</h2>
 
   <center>
 
@@ -75,7 +150,7 @@ nav_order: 6
 
   </center>
 
-  <h2 class="category">AAAI 2023</h2>
+  <h2 class="category">AAAI 2023 - Washington DC, USA</h2>
 
   <center>
 
@@ -108,7 +183,7 @@ nav_order: 6
 
   </center>
 
-  <h2 class="category">NeurIPS 2022</h2>
+  <h2 class="category">NeurIPS 2022 - New Orleans, USA</h2>
 
   <center>
 
@@ -132,18 +207,18 @@ nav_order: 6
 
   </center>
 
-  <h2 class="category">INFORMS Annual Meeting 2022</h2>
+  <h2 class="category">INFORMS Annual Meeting 2022 - Indianapolis, USA</h2>
 
   <center>
 
   {% include figure.html path="assets/photos/INFORMS22/1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
   {% include figure.html path="assets/photos/INFORMS22/2.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
-  {% include figure.html path="assets/photos/INFORMS22/3.jpeg" class="img-fluid rounded   z-depth-1" zoomable=true %}
+  {% include figure.html path="assets/photos/INFORMS22/3.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 
   </center>
 
-  <h2 class="category">UAI 2022</h2>
+  <h2 class="category">UAI 2022 - Amsterdam, Netherland</h2>
 
   <center>
 
@@ -163,7 +238,7 @@ nav_order: 6
       </div>
   </div>
 
-  <h2 class="category">ICML 2022</h2>
+  <h2 class="category">ICML 2022 - Baltimore, USA</h2>
 
   <div class="row mt-3">
       <div class="col-sm mt-3 mt-md-0">
@@ -201,7 +276,7 @@ nav_order: 6
       </div>
   </div>
 
-  <h2 class="category">CVPR 2022</h2>
+  <h2 class="category">CVPR 2022 - New Orleans, USA</h2>
   <div class="row mt-3">
       <div class="col-sm mt-3 mt-md-0">
           {% include figure.html path="assets/photos/CVPR22/0.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -244,7 +319,7 @@ nav_order: 6
     When I was an undergraduate, I wrote a CV algorithm with C++ and OpenCV that converts images to "string threads". It did not work everytime, but this was the most successful one from the photo of my pal <a href='https://gaoziqi.org/'>Ziqi Gao </a> (HKUST).
   </div>
 
-  <h2 class="category">Life at RWTH</h2>
+  <h2 class="category">Life at RWTH - Aachen, Germany</h2>
   <div class="row mt-3">
       <div class="col-sm mt-3 mt-md-0">
           {% include figure.html path="assets/photos/LifeAtRWTH/0.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -290,7 +365,7 @@ nav_order: 6
       </div>
   </div>
 
-  <h2 class="category">My Dog WuLa!</h2>
+  <h2 class="category">My Dog WuLa! - Chengdu, China</h2>
 
   <div class="row mt-3">
       <div class="col-sm mt-3 mt-md-0">
