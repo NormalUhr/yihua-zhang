@@ -311,14 +311,6 @@ nav_order: 6
 
   <center>
 
-  {% include figure.html path="assets/photos/miscellaneous/1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
-
-  </center>
-
-  <div class="caption">
-    When I was an undergraduate, I wrote a CV algorithm with C++ and OpenCV that converts images to "string threads". It did not work everytime, but this was the most successful one from the photo of my pal <a href='https://gaoziqi.org/'>Ziqi Gao </a> (HKUST).
-  </div>
-
   <h2 class="category">Life at RWTH - Aachen, Germany</h2>
   <div class="row mt-3">
       <div class="col-sm mt-3 mt-md-0">
