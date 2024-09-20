@@ -2,7 +2,7 @@
 ---
 
 @InProceedings{zhang2024defensive,
-  abbr={EMNLP'24},
+  abbr={Preprint'24},
   selected={false},
   bibtex_show={true},
   preview={defensive_unlearn.png},
@@ -14,21 +14,6 @@
   month     = {May},
   year      = {2024},
   abstract =   {Diffusion models (DMs) have achieved remarkable success in text-to-image generation, but they also pose safety risks, such as the potential generation of harmful content and copyright violations. The techniques of machine unlearning, also known as concept erasing, have been developed to address these risks. However, these techniques remain vulnerable to adversarial prompt attacks, which can prompt DMs post-unlearning to regenerate undesired images containing concepts (such as nudity) meant to be erased. This work aims to enhance the robustness of concept erasing by integrating the principle of adversarial training (AT) into machine unlearning, resulting in the robust unlearning framework referred to as AdvUnlearn. However, achieving this effectively and efficiently is highly non-trivial. First, we find that a straightforward implementation of AT compromises DMs’ image generation quality post-unlearning. To address this, we develop a utility-retaining regularization on an additional retain set, optimizing the trade-off between concept erasure robustness and model utility in AdvUnlearn. Moreover, we identify the text encoder as a more suitable module for robustification compared to UNet, ensuring unlearning effectiveness. And the acquired text encoder can serve as a plug-and-play robust unlearner for various DM types. Empirically, we perform extensive experiments to demonstrate the robustness advantage of AdvUnlearn across various DM unlearning scenarios, including the erasure of nudity, objects, and style concepts. In addition to robustness, AdvUnlearn also achieves a balanced tradeoff with model utility. To our knowledge, this is the first work to systematically explore robust DM unlearning through AT, setting it apart from existing methods that overlook robustness in concept erasing.}
-}
-
-@InProceedings{jia2024soul,
-  abbr={EMNLP'24},
-  selected={false},
-  bibtex_show={true},
-  preview={soul.png},
-  html={https://arxiv.org/pdf/2404.18239},
-  code={https://github.com/OPTML-Group/UnlearnCanvas},
-  title =    {Soul: Unlocking the power of second-order optimization for llm unlearning},
-  author =       {Jia, Jinghan and Zhang, Yihua and Zhang, Yimeng and Liu, Jiancheng and Runwal, Bharat and Diffenderfer, James and Kailkhura, Bhavya and Liu, Sijia},
-  booktitle = {arXiv preprint arXiv:2404.18239},
-  month     = {April},
-  year      = {2024},
-  abstract =   {Large Language Models (LLMs) have highlighted the necessity of effective unlearning mechanisms to comply with data regulations and ethical AI practices. LLM unlearning aims at removing undesired data influences and associated model capabilities without compromising utility out of the scope of unlearning. While interest in studying LLM unlearning is growing,the impact of the optimizer choice for LLM unlearning remains under-explored. In this work, we shed light on the significance of optimizer selection in LLM unlearning for the first time, establishing a clear connection between {second-order optimization} and influence unlearning (a classical approach using influence functions to update the model for data influence removal). This insight propels us to develop a second-order unlearning framework, termed SOUL, built upon the second-order clipped stochastic optimization (Sophia)-based LLM training method. SOUL extends the static, one-shot model update using influence unlearning to a dynamic, iterative unlearning process. Our extensive experiments show that SOUL consistently outperforms conventional first-order methods across various unlearning tasks, models, and metrics, suggesting the promise of second-order optimization in providing a scalable and easily implementable solution for LLM unlearning.}
 }
 
 
@@ -51,6 +36,20 @@
   abstract =   {The rapid advancement of diffusion models (DMs) has not only transformed various real-world industries but has also introduced negative societal concerns, including the generation of harmful content, copyright disputes, and the rise of stereotypes and biases. To mitigate these issues, machine unlearning (MU) has emerged as a potential solution, demonstrating its ability to remove undesired generative capabilities of DMs in various applications. However, by examining existing MU evaluation methods, we uncover several key challenges that can result in incomplete, inaccurate, or biased evaluations for MU in DMs. To address them, we enhance the evaluation metrics for MU, including the introduction of an often-overlooked retainability measurement for DMs post-unlearning. Additionally, we introduce UnlearnCanvas, a comprehensive high-resolution stylized image dataset that facilitates us to evaluate the unlearning of artistic painting styles in conjunction with associated image objects. We show that this dataset plays a pivotal role in establishing a standardized and automated evaluation framework for MU techniques on DMs, featuring 7 quantitative metrics to address various aspects of unlearning effectiveness. Through extensive experiments, we benchmark 5 state-of-the-art MU methods, revealing novel insights into their pros and cons, and the underlying unlearning mechanisms. Furthermore, we demonstrate the potential of UnlearnCanvas to benchmark other generative modeling tasks, such as style transfer.}
 }
 
+@InProceedings{jia2024soul,
+  abbr={EMNLP'24},
+  selected={false},
+  bibtex_show={true},
+  preview={soul.png},
+  html={https://arxiv.org/pdf/2404.18239},
+  code={https://github.com/OPTML-Group/UnlearnCanvas},
+  title =    {Soul: Unlocking the power of second-order optimization for llm unlearning},
+  author =       {Jia, Jinghan and Zhang, Yihua and Zhang, Yimeng and Liu, Jiancheng and Runwal, Bharat and Diffenderfer, James and Kailkhura, Bhavya and Liu, Sijia},
+  booktitle = {arXiv preprint arXiv:2404.18239},
+  month     = {April},
+  year      = {2024},
+  abstract =   {Large Language Models (LLMs) have highlighted the necessity of effective unlearning mechanisms to comply with data regulations and ethical AI practices. LLM unlearning aims at removing undesired data influences and associated model capabilities without compromising utility out of the scope of unlearning. While interest in studying LLM unlearning is growing,the impact of the optimizer choice for LLM unlearning remains under-explored. In this work, we shed light on the significance of optimizer selection in LLM unlearning for the first time, establishing a clear connection between {second-order optimization} and influence unlearning (a classical approach using influence functions to update the model for data influence removal). This insight propels us to develop a second-order unlearning framework, termed SOUL, built upon the second-order clipped stochastic optimization (Sophia)-based LLM training method. SOUL extends the static, one-shot model update using influence unlearning to a dynamic, iterative unlearning process. Our extensive experiments show that SOUL consistently outperforms conventional first-order methods across various unlearning tasks, models, and metrics, suggesting the promise of second-order optimization in providing a scalable and easily implementable solution for LLM unlearning.}
+}
 
 @InProceedings{zhang2023generate,
   abbr={ECCV'24},
