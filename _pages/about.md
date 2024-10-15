@@ -38,5 +38,5 @@ Machine Unlearning, Jailbreak Attack, Adversarial Training, Fairness, Parameter-
 
 **Collaboration Opportunities**
 
-I am always open to collaborations with researchers, as well as undergraduate and graduate students seeking Ph.D. positions. While my primary research focuses on trustworthy and scalable ML algorithms for LLMs and DMs, I am also interested in exploring a wide range of topics beyond these areas. If you have exciting research ideas or are looking for opportunities to conduct research under professional guidance, feel free to reach out to me. I look forward to discovering new possibilities and working together on innovative projects.
+I am always open to collaborations with researchers, as well as undergraduate and graduate students seeking Ph.D. positions. While my primary research focuses on trustworthy and scalable ML algorithms for LLMs and DMs, I am also interested in exploring a wide range of topics beyond these areas. If you have exciting research ideas or are looking for opportunities to conduct research under professional guidance, feel free to reach out to me. Please refer to my [collaboration statement](https://www.yihua-zhang.com/collaboration) for more details.
 
