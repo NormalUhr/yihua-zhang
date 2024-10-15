@@ -21,11 +21,22 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am Yihua Zhang (张逸骅), a third-year Ph.D. student from [OPTML Group](https://www.optml-group.com/) at Michigan State University, supervised by [Prof. Sijia Liu](https://lsjxjtu.github.io/). My research focuses on the *trustworthy* and *scalable ML* algorithms. In general, my research spans the areas of machine learning (ML)/deep learning (DL), optimization theory, computer vision, and security. These research topics provide a solid foundation for my current and future research: Making AI system **responsible** and **efficient**. My research on these two goals are intervened and can be summarized as the following two
-perspectives:
 
-:heavy_check_mark: **Algorithmic perspective**: This line of research designs the scalable and theoretically-grounded machine learning algorithms subject to real-life constraints, including bi-level optimization, zeroth-order optimization, inviriant risk minimization, etc.
+Yihua Zhang (张逸骅) is a third-year Ph.D. student at [OPTML Group](https://www.optml-group.com/) at Michigan State University, under the supervision of [Prof. Sijia Liu](https://lsjxjtu.github.io/). His research centers on *trustworthy* and *scalable* machine learning (ML) algorithms for large language models (LLMs) and diffusion models (DMs), with a keen focus on bridging theoretical foundations and real-world applications. In recognition of his outstanding contributions, Yihua was honored with the prestigious [MLCommons Rising Star Award in 2024](https://mlcommons.org/2024/06/2024-mlc-rising-stars/). Yihua has gained valuable industry experience through internships at leading technology companies such as [Meta AI](https://ai.meta.com/), [Amazon AWS AI Lab](https://aws.amazon.com/ai/), and [Cisco Research](https://research.cisco.com/). Yihua’s work is driven by the need to develop efficient, scalable, and robust ML algorithms, with a commitment to addressing modern challenges in these domains.
 
-:heavy_check_mark: **Application perspective**: This line of research tackles the domain-specific challenges to achieve scalable and trustworthy AI, including data and model pruning, efficient model structures, model robustness and unlearning, etc.
+:heavy_check_mark: **Theme 1: Trustworthy Foundation Models: Robustness, Fairness, and Unlearning**: Yihua explores how to enhance the trustworthiness of foundation models, focusing on robustness against adversarial attacks, fairness in decision-making, and the emerging area of machine unlearning to ensure data privacy and compliance with deletion requests.
 
+:heavy_check_mark: **Theme 2: Scalable Foundation Models: Efficient Models, Data, and Algorithms**: In this theme, Yihua's work revolves around designing models that are not only powerful but also computationally efficient. His research includes advancements in model sparsification, memory-efficient fine-tuning techniques, and optimizing data usage for large-scale models.
+
+:heavy_check_mark: **Theme 3: Optimization in Modern ML: Bi-Level and Zeroth-Order Optimization**
+This research line focuses on the theoretical underpinnings of scalable machine learning algorithms, addressing real-world constraints through bi-level optimization and zeroth-order optimization.
+
+**Research Keywords**
+
+Machine Unlearning, Jailbreak Attack, Adversarial Training, Fairness, Parameter-Efficient Fine-Tuning, Memory-Efficient Fine-Tuning, Mixture-of-Experts, Model Sparsity, Large Language Model, Diffusion Model, Bi-Level Optimization, Zeroth-Order Optimization.
+
+
+**Collaboration Opportunities**
+
+I am always open to collaborations with researchers, as well as undergraduate and graduate students seeking Ph.D. positions. While my primary research focuses on trustworthy and scalable ML algorithms for LLMs and DMs, I am also interested in exploring a wide range of topics beyond these areas. If you have an exciting research idea or are looking for opportunities to conduct research under professional guidance, feel free to reach out to me via email. I look forward to discovering new possibilities and working together on innovative projects.
 
