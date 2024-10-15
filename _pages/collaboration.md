@@ -1,7 +1,7 @@
 ---
 layout: research
 title: Collaboration
-permalink: /colaboration/
+permalink: /collaboration/
 description:
 nav: true
 nav_order: 2
