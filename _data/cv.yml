@@ -4,7 +4,7 @@
     - name: Full Name
       value: Yihua Zhang
     - name: Date of Birth
-      value: 9th July 1997
+      value: 9th July
     - name: Languages
       value: Chinese, English, German
 
@@ -38,6 +38,10 @@
 - title: Internship Experience
   type: time_table
   contents:
+    - title: Research Scientist Internship
+      institution: Meta AI
+      year: 09/2024-Current
+      description: Effective multi-agent system for recommendation
     - title: Research Scientist Intern
       institution: Cisco Research
       year: 11/2023-08/2024
@@ -89,7 +93,8 @@
     - <u>Conference Reviewer:</u> CVPR, ICLR, ICML, NeurIPS, ICCV/ECCV, AISTATS, UAI
     - <u>Journal Reviewer:</u> TMLR, T-PAMI, T-IFS, 
     - Student chair of ICML’22 Workshop AdvML (<a href="https://advml-frontier.github.io/past/icml2022/">New Frontiers in Adversarial Machine Learning</a>).
-    - Student chair of ICML'23 Workshop AdvML (<a href="https://advml-frontier.github.io/">New Frontiers in Adversarial Machine Learning</a>).
+    - Student chair of ICML'23 Workshop AdvML (<a href="https://advml-frontier.github.io/past/icml2023/">New Frontiers in Adversarial Machine Learning</a>).
+    - Student chair of NeurIPS'24 Workshop AdvML (<a href="https://advml-frontier.github.io/">New Frontiers in Adversarial Machine Learning</a>).
 
 - title: Tutorials/Talk
   type: list
