@@ -1,6 +1,35 @@
 ---
 ---
 
+@InProceedings{wang2025edit,
+  abbr={CVPR'25},
+  selected={true},
+  bibtex_show={true},
+  preview={facelock.png},
+  html={https://arxiv.org/pdf/2411.16832},
+  code={https://github.com/taco-group/FaceLock},
+  title =    {Edit Away and My Face Will not Stay: Personal Biometric Defense against Malicious Generative Editing},
+  author =       {Wang, Hanhui and Zhang, Yihua and Bai, Ruizheng and Zhao, Yue and Liu, Sijia and Tu, Zhengzhong},
+  booktitle={The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2025},
+  year={2025},
+  abstract =   {Recent advancements in diffusion models have made generative image editing more accessible than ever. While these developments allow users to generate creative edits with ease, they also raise significant ethical concerns, particularly regarding malicious edits to human portraits that threaten individuals’ privacy and identity security. Existing general-purpose image protection methods primarily focus on generating adversarial perturbations to nullify edit effects. However, these approaches often exhibit instability to protect against diverse editing requests. In this work, we introduce a novel perspective to personal human portrait protection against malicious editing. Unlike traditional methods aiming to prevent edits from taking effect, our method, FACELOCK, optimizes adversarial perturbations to ensure that original biometric information—such as facial features—is either destroyed or substantially altered post-editing, rendering the subject in the edited output biometrically unrecognizable. Our approach innovatively integrates facial recognition and visual perception factors into the perturbation optimization process, ensuring robust protection against a variety of editing attempts. Besides, we shed light on several critical issues with commonly used evaluation metrics in image editing and reveal cheating methods by which they can be easily manipulated, leading to deceptive assessments of protection. Through extensive experiments, we demonstrate that FACELOCK significantly outperforms all baselines in defense performance against a wide range of malicious edits. Moreover, our method also exhibits strong robustness against purification techniques. Comprehensive ablation studies confirm the stability and broad applicability of our method across diverse diffusion-based editing algorithms. Our work not only advances the state-of-the-art in biometric defense but also sets the foundation for more secure and privacy-preserving practices in image editing. The code is publicly available at: https://github.com/taco-group/FaceLock.}
+}
+
+@InProceedings{li2025when,
+  abbr={ICLR’25},
+  selected={false},
+  bibtex_show={true},
+  preview={salun.png},
+  html={https://openreview.net/pdf?id=vRvVVb0NAz},
+  code={},
+  poster={},
+  title =    {When is Task Vector Provably Effective for Model Editing? A Generalization Analysis of Nonlinear Transformers},
+  author =       {Li, Hongkang and Zhang, Yihua and Zhang, Shuai and Chen, Pin-Yu and Liu, Sijia and Wang, Meng},
+  booktitle = {The Thirteenth International Conference on Learning Representations},
+  year      = {2025},
+  abstract =   {Task arithmetic refers to editing the pre-trained model by adding a weighted sum of task vectors, each of which is the weight update from the pre-trained model to fine-tuned models for certain tasks. This approach recently gained attention as a computationally efficient inference method for model editing, e.g., multi-task learning, forgetting, and out-of-domain generalization capabilities. However, the theoretical understanding of why task vectors can execute various conceptual operations remains limited, due to the highly non-convexity of training Transformerbased models. To the best of our knowledge, this paper provides the first theoretical characterization of the generalization guarantees of task vector methods on nonlinear Transformers. We consider a conceptual learning setting, where each task is a binary classification problem based on a discriminative pattern. We theoretically prove the effectiveness of task addition in simultaneously learning a set of irrelevant or aligned tasks, as well as the success of task negation in unlearning one task from irrelevant or contradictory tasks. Moreover, we prove the proper selection of linear coefficients for task arithmetic to achieve guaranteed generalization to out-of-domain tasks. All of our theoretical results hold for both denseweight parameters and their low-rank approximations. Although established in a conceptual setting, our theoretical findings were validated on a practical machine unlearning task using the large language model Phi-1.5 (1.3B).}
+}
+
 @InProceedings{zhang2024defensive,
   abbr={NeurIPS'24},
   selected={false},
