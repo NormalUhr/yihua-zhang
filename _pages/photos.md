@@ -9,6 +9,60 @@ nav_order: 6
 
 <div class="projects">
 
+  <h2 class="category">Fitch Beach Award Ceremony 2025 - MSU, USA</h2>
+
+  <center>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/Fitch Beach 25/pic1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/Fitch Beach 25/pic2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/Fitch Beach 25/pic3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/Fitch Beach 25/pic4.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  </center>
+
+  <h2 class="category">CPAL 2025 - Stanford, Palo Alto, USA</h2>
+
+  <center>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/CPAL25/pic1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/CPAL25/pic2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  </center>
+
+  <h2 class="category">NAIRR 2025 - Arlington, USA</h2>
+
+  <center>
+
+  <div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/NAIRR25/pic1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/photos/NAIRR25/pic2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  </center>
+
   <h2 class="category">ICLR 2024 - Vienna, Austria</h2>
 
   <center>
