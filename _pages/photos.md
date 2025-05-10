@@ -124,7 +124,7 @@ nav_order: 6
     </div>
   </div>
 
-   <div class="row mt-3">
+  <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/photos/NeurIPS23/6.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
@@ -269,7 +269,6 @@ nav_order: 6
   {% include figure.html path="assets/photos/INFORMS22/2.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
   {% include figure.html path="assets/photos/INFORMS22/3.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-
   </center>
 
   <h2 class="category">UAI 2022 - Amsterdam, Netherland</h2>
@@ -279,7 +278,6 @@ nav_order: 6
   {% include figure.html path="assets/img/news/uai22/1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
   {% include figure.html path="assets/img/news/uai22/3.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-  </center>
   <div class="row mt-3">
       <div class="col-sm mt-3 mt-md-0">
           {% include figure.html path="assets/img/news/uai22/4.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -291,6 +289,8 @@ nav_order: 6
           {% include figure.html path="assets/img/news/uai22/2.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
       </div>
   </div>
+
+  </center>
 
   <h2 class="category">ICML 2022 - Baltimore, USA</h2>
 
@@ -362,8 +362,6 @@ nav_order: 6
   <div class="caption">
     I was doing an internship and designing algorithms reverse engineering the 3D model of the object with point clouds. The scanning was a debug test and my face looks like snapped by Thanos.
   </div>
-
-  <center>
 
   <h2 class="category">Life at RWTH - Aachen, Germany</h2>
   <div class="row mt-3">
