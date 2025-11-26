@@ -29,7 +29,7 @@ Yihua Zhang (张逸骅) is a fourth-year Ph.D. student at [OPTML Group](https://
 :heavy_check_mark: **Industry: Multimodal Modeling and Large-Scale Pretraining for LLMs and VLMs**  
 Yihua’s industrial research experience spans both [Meta AI](https://ai.meta.com/) and [Bytedance Seed](https://seed.bytedance.com/en/), where he contributed to developing the next generation of large-scale multimodal foundation models. 
 * At Meta, he built and deployed SOTA fusion and alignment algorithms across 8–10 distinct modalities, which have been integrated into Meta’s internal production systems, achieving remarkable progress in multimodal ads ranking and unified modeling. His work led to the design and scalable training of industry-level multimodal foundation models that combine vision, text, audio, tabular, time-series, and structured data within a unified framework  
-* At Bytedance Seed, he focused on token-efficient multimodal fusion for Seed-VLM pretraining, designing novel optimizers to improve convergence, stability, and token utilization efficiency. 
+* At Bytedance Seed, he focused on token-efficient VLM pretraining and better modality alignment. 
 * Yihua gained extensive large-scale distributed training experience, working on multi-node (32–128 nodes, >256–1024 A100/H100) systems, leveraging advanced frameworks, such as Megatron and FSDP2, with a deep understanding of parallel strategies including TP (tensor), PP (pipeline), SP (sequence), and EP (expert) parallelism. These experiences have strengthened his ability to bridge algorithmic innovation with production-grade deployment of multimodal foundation models at scale.
 
 
