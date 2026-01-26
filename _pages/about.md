@@ -33,7 +33,7 @@ Yihua’s industrial research experience spans both [Meta AI](https://ai.meta.co
 * Yihua gained extensive large-scale distributed training experience, working on multi-node (32–128 nodes, >256–1024 A100/H100) systems, leveraging advanced frameworks, such as Megatron and FSDP2, with a deep understanding of parallel strategies including TP (tensor), PP (pipeline), SP (sequence), and EP (expert) parallelism. These experiences have strengthened his ability to bridge algorithmic innovation with production-grade deployment of multimodal foundation models at scale.
 
 
-**<a href="https://www.linkedin.com/in/zhangyihua/">I am on the academic and industry job market right now! If you know any role that might be a good fit, please contact me, thanks!</a>**
+<!-- **<a href="https://www.linkedin.com/in/zhangyihua/">I am on the academic and industry job market right now! If you know any role that might be a good fit, please contact me, thanks!</a>** -->
 
 
 :heavy_check_mark: **Theme 1: Trustworthy Foundation Models: Robustness, Fairness, and Unlearning**: Yihua explores how to enhance the trustworthiness of foundation models, focusing on robustness against adversarial attacks, fairness in decision-making, and the emerging area of machine unlearning to ensure data privacy and compliance with deletion requests.
@@ -44,7 +44,7 @@ Yihua’s industrial research experience spans both [Meta AI](https://ai.meta.co
 This research line focuses on the theoretical underpinnings of scalable machine learning algorithms, addressing real-world constraints through bi-level optimization and zeroth-order optimization.
 
 
-**Collaboration Opportunities**
+<!-- **Collaboration Opportunities**
 
-I am always open to collaborations with researchers, as well as undergraduate and graduate students seeking Ph.D. positions. While my primary research focuses on trustworthy and scalable ML algorithms for LLMs and DMs, I am also interested in exploring a wide range of topics beyond these areas. If you have exciting research ideas or are looking for opportunities to conduct research under professional guidance, feel free to reach out to me. Please refer to my [collaboration statement](./collaboration) for more details. You are also welcome to befriend me on [Wechat](./assets/img/Wechat.jpg) or connect me through [LinkedIn](https://www.linkedin.com/in/zhangyihua/).
+I am always open to collaborations with researchers, as well as undergraduate and graduate students seeking Ph.D. positions. While my primary research focuses on trustworthy and scalable ML algorithms for LLMs and DMs, I am also interested in exploring a wide range of topics beyond these areas. If you have exciting research ideas or are looking for opportunities to conduct research under professional guidance, feel free to reach out to me. Please refer to my [collaboration statement](./collaboration) for more details. You are also welcome to befriend me on [Wechat](./assets/img/Wechat.jpg) or connect me through [LinkedIn](https://www.linkedin.com/in/zhangyihua/). -->
 
