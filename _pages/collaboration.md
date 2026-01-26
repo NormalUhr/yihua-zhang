@@ -3,7 +3,7 @@ layout: research
 title: Collaboration
 permalink: /collaboration/
 description:
-nav: true
+nav: false
 nav_order: 2
 ---
 
